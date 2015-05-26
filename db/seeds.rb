@@ -6,3 +6,6 @@ test2 = Test.create!(image:"http://www.javatpoint.com/images/javascript/javascri
 
 levelJS1 = Level.create!(test_id: 1, title: "Level 1", brief: "Have you heard of JS?")
 levelR1 = Level.create!(test_id: 2, title: "Level 1", brief: "Have you heard of Ruby?")
+
+questionJS1 = Question.create!(test_id: 1, level_id: 2, title: "Question 1", content: "What is JavaScript?")
+
