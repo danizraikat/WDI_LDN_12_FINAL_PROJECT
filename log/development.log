@@ -567,3 +567,878 @@ Migrating to CreateLevels (20150526111639)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (44.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$WCgNsgwdXHHtA3nTQs4vieHL/6I7mp09HLVmchtCYnVTCa0JG8ezu"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 11:37:20.124215"], ["updated_at", "2015-05-26 11:37:20.124215"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (7.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (10.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (14.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (67.1ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (15.9ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (36.1ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$DO6x9GDdSusFS9XJ3SyubuMjnosN.u/Ao6QZj7BINr0dlidGJTT9y"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 11:39:04.552915"], ["updated_at", "2015-05-26 11:39:04.552915"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$F4Vwrsvq5wF4iRzpxPjJhOe7XdqaIQXBmIeOM5rMLDZ1a0MOnX1x2"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 11:39:04.656619"], ["updated_at", "2015-05-26 11:39:04.656619"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 11:39:04.693144"], ["updated_at", "2015-05-26 11:39:04.693144"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (23.3ms)[0m  select sqlite_version(*)
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.2ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$mq469123AjGj1DbkDVJqQus80leCRhptujvO0DcZT/XProac6VQjG"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:42:59.598716"], ["updated_at", "2015-05-26 13:42:59.598716"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$qCeV1TIbP3RcWgCSA9XakewlLQUiIoGWV4Dx7AzNyQn/lXJFfwhc6"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:42:59.727940"], ["updated_at", "2015-05-26 13:42:59.727940"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:42:59.769025"], ["updated_at", "2015-05-26 13:42:59.769025"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-26 13:42:59.774419"], ["updated_at", "2015-05-26 13:42:59.774419"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$ZrXVuX32Lcvln1sZqeOTKu8VY.C/zv032hP3py2Cp3vZiTnenYtH2"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:43:49.954948"], ["updated_at", "2015-05-26 13:43:49.954948"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$DypbVGvrnlfeSVAkuzpcZuAhqWdNL81OzMBsaMOEVI8/n0jo74BjG"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:43:50.058217"], ["updated_at", "2015-05-26 13:43:50.058217"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:43:50.074369"], ["updated_at", "2015-05-26 13:43:50.074369"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-26 13:43:50.079474"], ["updated_at", "2015-05-26 13:43:50.079474"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (1.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$onB6Dh8vzjTPdB.HW2AUSuktPXVajHhsBJSvyWw0L7tEoP4TxHNyi"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:44:39.034404"], ["updated_at", "2015-05-26 13:44:39.034404"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$rwobNkOe0D0.U93CsLE3bO08r5Lw4sKlR9OaZpYPbFY2.ZwJo0qSG"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:44:39.141218"], ["updated_at", "2015-05-26 13:44:39.141218"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:44:39.158469"], ["updated_at", "2015-05-26 13:44:39.158469"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-26 13:44:39.163875"], ["updated_at", "2015-05-26 13:44:39.163875"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$5OBU479xrTKE9/DQ9XBwReDuWRY/7TvBnacxJ0KMOH6144zMXnC4."], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:46:29.341305"], ["updated_at", "2015-05-26 13:46:29.341305"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$rya9YrsmcbC.wgupzaNreOPbQFgy9aZeiYL2zteDAtXUr9pM93F1i"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:46:29.443494"], ["updated_at", "2015-05-26 13:46:29.443494"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:46:29.458779"], ["updated_at", "2015-05-26 13:46:29.458779"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-26 13:46:29.465174"], ["updated_at", "2015-05-26 13:46:29.465174"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$jslviy49q8CmSnQbIXppkeqv2uKnCVu7zznIzgTVSzlrsYclWKS5K"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:49:31.067608"], ["updated_at", "2015-05-26 13:49:31.067608"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$EanqDGiH5sfAgQ6zc7Ll5u44zFJTAovYOTA8RJGiM5Nam/t8B5Jk6"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:49:31.164971"], ["updated_at", "2015-05-26 13:49:31.164971"]]
+  [1m[36m (11.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:49:31.205357"], ["updated_at", "2015-05-26 13:49:31.205357"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-26 13:49:31.210582"], ["updated_at", "2015-05-26 13:49:31.210582"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mLevel Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "levels" WHERE "levels"."title" = 'Level 123' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$p.0kJQL7kSkvE3KOFC4nmuHi5yIbPwiZzi8qWZs2q/EFK9QH6Ti76"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:51:07.963419"], ["updated_at", "2015-05-26 13:51:07.963419"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$5iiQBh/wc56UjGDINkr0leOzKK8W8bFzdERBxvPT1HtAbQlFnvLCq"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:51:08.064022"], ["updated_at", "2015-05-26 13:51:08.064022"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:51:08.110753"], ["updated_at", "2015-05-26 13:51:08.110753"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-26 13:51:08.116192"], ["updated_at", "2015-05-26 13:51:08.116192"]]
+  [1m[36m (31.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mLevel Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "levels" WHERE "levels"."title" = 'Level 1' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["test_id", 1], ["title", "Level 1"], ["brief", "Have you heard of JS?"], ["created_at", "2015-05-26 13:51:08.235318"], ["updated_at", "2015-05-26 13:51:08.235318"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (10.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$boYW4egCj9SU8FIx2myjGe4qww28wD537GFeU9716hUHYgr6HykMe"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:51:31.341340"], ["updated_at", "2015-05-26 13:51:31.341340"]]
+  [1m[35m (15.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$0kyUBJWbSMn2GRlLtpJ4sOLkwMpfmmpH.JvZQniKEC5MsIXgmN1g2"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:51:31.459724"], ["updated_at", "2015-05-26 13:51:31.459724"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:51:31.497918"], ["updated_at", "2015-05-26 13:51:31.497918"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (20.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$ybOA8VCdM.mcAg/Hh5gNqucwnUaGCPLrEB5NAKbL2PdQKeGr6XihG"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 13:55:34.691919"], ["updated_at", "2015-05-26 13:55:34.691919"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$wf6X7RR44pSYCOKv6O5NB.EXwWqxTZQi2.xFBMqi.xmUCxbrWM0Ma"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-26 13:55:34.804536"], ["updated_at", "2015-05-26 13:55:34.804536"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-26 13:55:34.834058"], ["updated_at", "2015-05-26 13:55:34.834058"]]
+  [1m[36m (11.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-26 13:55:34.850449"], ["updated_at", "2015-05-26 13:55:34.850449"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["test_id", 1], ["title", "Level 1"], ["brief", "Have you heard of JS?"], ["created_at", "2015-05-26 13:55:34.930228"], ["updated_at", "2015-05-26 13:55:34.930228"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Ruby' AND "tests"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["test_id", 2], ["title", "Level 1"], ["brief", "Have you heard of Ruby?"], ["created_at", "2015-05-26 13:55:34.938080"], ["updated_at", "2015-05-26 13:55:34.938080"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
