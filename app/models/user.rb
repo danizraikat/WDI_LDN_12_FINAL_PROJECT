@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
     message: "%{value} is not accepted as a role" }
   validates :brief, length: { maximum: 500,
     too_long: "%{count} characters is the maximum allowed" }
+  validates :email, uniqueness: true
 end

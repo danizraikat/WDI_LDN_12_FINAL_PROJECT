@@ -3,4 +3,6 @@ class Test < ActiveRecord::Base
     too_long: "%{count} characters is the maximum allowed" }
   validates :name, length: { maximum: 50,
     too_long: "%{count} characters is the maximum allowed"}
+  validates :name, presence: true
+  validates :name, uniqueness: true
 end
