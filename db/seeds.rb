@@ -8,4 +8,8 @@ levelJS1 = Level.create!(test_id: 1, title: "Level 1", brief: "Have you heard of
 levelR1 = Level.create!(test_id: 2, title: "Level 1", brief: "Have you heard of Ruby?")
 
 questionJS1 = Question.create!(test_id: 1, level_id: 2, title: "Question 1", content: "What is JavaScript?")
+questionJS1 = Question.create!(test_id: 1, level_id: 2, title: "Question 1", content: "What is JavaScript?")
 
+answerJS1 = Answer.create!(question_id: 1, title: "1", content: "I know what it is", correctness: false)
+answerJS2 = Answer.create!(question_id: 1, title: "2", content: "I kinda know what it is", correctness: true)
+answerJS3 = Answer.create!(question_id: 1, title: "3", content: "I don't know what it is", correctness: false) 
