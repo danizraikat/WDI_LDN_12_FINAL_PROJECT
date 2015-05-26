@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Level Plays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Level</th>
+      <th>Max score</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @level_plays.each do |level_play| %>
+      <tr>
+        <td><%= level_play.user_id %></td>
+        <td><%= level_play.level_id %></td>
+        <td><%= level_play.max_score %></td>
+        <td><%= level_play.score %></td>
+        <td><%= link_to 'Show', level_play %></td>
+        <td><%= link_to 'Edit', edit_level_play_path(level_play) %></td>
+        <td><%= link_to 'Destroy', level_play, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Level play', new_level_play_path %>

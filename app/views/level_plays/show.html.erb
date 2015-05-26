@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @level_play.user_id %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @level_play.level_id %>
+</p>
+
+<p>
+  <strong>Max score:</strong>
+  <%= @level_play.max_score %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @level_play.score %>
+</p>
+
+<%= link_to 'Edit', edit_level_play_path(@level_play) %> |
+<%= link_to 'Back', level_plays_path %>

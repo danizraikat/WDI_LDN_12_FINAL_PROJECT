@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :level_plays
   resources :answers
   resources :questions
   resources :levels
