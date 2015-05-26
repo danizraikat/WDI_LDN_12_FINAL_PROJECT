@@ -394,3 +394,26 @@ Migrating to AddRoleToUsers (20150526100800)
   [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
   [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$G9XTFfWCLKBR1eBeyaHSE.cvPbBQZnWfEPFcfNV1j4/88106KQC5K"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-26 10:50:02.665482"], ["updated_at", "2015-05-26 10:50:02.665482"]]
   [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (38.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
