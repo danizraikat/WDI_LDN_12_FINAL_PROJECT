@@ -4839,3 +4839,117 @@ Migrating to CreateQuestionPlays (20150527084828)
   [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "question_plays" ("user_id", "question_id", "answer_id", "level_play_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["question_id", 1], ["answer_id", 1], ["level_play_id", 1], ["score", "0"], ["created_at", "2015-05-27 09:09:50.962218"], ["updated_at", "2015-05-27 09:09:50.962218"]]
   [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (7.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (22.3ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JS' LIMIT 1
+  [1m[36mSQL (24.6ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", ""], ["name", "JS"], ["brief", "first"], ["created_at", "2015-05-27 09:40:10.048249"], ["updated_at", "2015-05-27 09:40:10.048249"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.3ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'CSS' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", ""], ["name", "CSS"], ["brief", "first"], ["created_at", "2015-05-27 09:48:15.070484"], ["updated_at", "2015-05-27 09:48:15.070484"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.4ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["test_id", 1], ["title", "Level 1"], ["brief", "try"], ["created_at", "2015-05-27 09:49:34.079125"], ["updated_at", "2015-05-27 09:49:34.079125"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'CSS' AND "tests"."id" != 4) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["test_id", 4], ["title", "Level 1"], ["brief", "try"], ["created_at", "2015-05-27 09:50:13.487550"], ["updated_at", "2015-05-27 09:50:13.487550"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mLevel Load (1.6ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.4ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (24.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JS' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mTest Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.3ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'WDI' LIMIT 1
+  [1m[36mSQL (38.2ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", ""], ["name", "WDI"], ["brief", "first"], ["created_at", "2015-05-27 11:21:43.357644"], ["updated_at", "2015-05-27 11:21:43.357644"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.4ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (16.5ms)[0m  INSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["test_id", 1], ["title", "Level 1"], ["brief", "try"], ["created_at", "2015-05-27 11:24:32.856081"], ["updated_at", "2015-05-27 11:24:32.856081"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mLevel Load (0.3ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'WDI' AND "tests"."id" != 5) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["test_id", 5], ["title", "Level 2"], ["brief", "try again"], ["created_at", "2015-05-27 11:27:07.091839"], ["updated_at", "2015-05-27 11:27:07.091839"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Test10' LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", ""], ["name", "Test10"], ["brief", "ten"], ["created_at", "2015-05-27 11:30:41.698105"], ["updated_at", "2015-05-27 11:30:41.698105"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTest Exists (0.3ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "levels" ("test_id", "title", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["test_id", 6], ["title", "Level10"], ["brief", "ten"], ["created_at", "2015-05-27 11:33:01.898575"], ["updated_at", "2015-05-27 11:33:01.898575"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1[0m
+  [1m[35mSQL (40.0ms)[0m  INSERT INTO "questions" ("test_id", "level_id", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["test_id", 6], ["level_id", 7], ["title", "Q10"], ["content", "What is?"], ["created_at", "2015-05-27 11:42:17.800733"], ["updated_at", "2015-05-27 11:42:17.800733"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."test_id" = ?  [["test_id", 6]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?[0m  [["level_id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1
+  [1m[36mSQL (51.5ms)[0m  [1mINSERT INTO "answers" ("question_id", "title", "content", "correctness", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["question_id", 3], ["title", "1"], ["content", "I know"], ["correctness", "f"], ["created_at", "2015-05-27 11:45:38.244420"], ["updated_at", "2015-05-27 11:45:38.244420"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (17.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'anna@anna.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'anna@anna.com' LIMIT 1
+  [1m[36mSQL (50.6ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "anna@anna.com"], ["encrypted_password", "$2a$10$mnML9jBwbXX3FgiH2nuO1uQMLWwXxNm110Kn0qRSxNfsdScPoxiWK"], ["name", "Anna"], ["brief", "Anna"], ["role", "Admin"], ["created_at", "2015-05-27 11:58:07.857963"], ["updated_at", "2015-05-27 11:58:07.857963"]]
+  [1m[35m (15.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'anna@anna.com' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1
+  [1m[36mSQL (42.0ms)[0m  [1mINSERT INTO "level_plays" ("user_id", "level_id", "max_score", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["level_id", 7], ["max_score", "10"], ["score", "5"], ["created_at", "2015-05-27 12:01:19.803161"], ["updated_at", "2015-05-27 12:01:19.803161"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mLevelPlay Load (0.4ms)[0m  [1mSELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mLevelPlay Load (0.3ms)[0m  SELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."level_id" = ?  [["level_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'anna@anna.com' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1
+  [1m[36mLevelPlay Load (0.2ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'anna@anna.com' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'Test10' AND "tests"."id" != 6) LIMIT 1
+  [1m[36mSQL (52.1ms)[0m  [1mINSERT INTO "question_plays" ("user_id", "question_id", "answer_id", "level_play_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["question_id", 3], ["answer_id", 4], ["level_play_id", 2], ["score", "1"], ["created_at", "2015-05-27 12:06:19.613228"], ["updated_at", "2015-05-27 12:06:19.613228"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mQuestionPlay Load (0.4ms)[0m  [1mSELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mQuestionPlay Load (0.4ms)[0m  SELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."question_id" = ?  [["question_id", 3]]
+  [1m[36mQuestionPlay Load (0.3ms)[0m  [1mSELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."answer_id" = ?[0m  [["answer_id", 4]]
+  [1m[35mQuestionPlay Load (0.3ms)[0m  SELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."level_play_id" = ?  [["level_play_id", 2]]
