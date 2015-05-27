@@ -16,6 +16,10 @@ answerJS3 = Answer.create!(question_id: 1, title: "3", content: "I don't know wh
 
 level_playJS1 = LevelPlay.create!(user_id: 1, level_id: 1, max_score: "1", score: "0")
 
+question_playJS1 = QuestionPlay.create!(user_id: 1, question_id: 1, answer_id: 1, level_play_id: 1, score: "0")
+
+
+
 
 
 
