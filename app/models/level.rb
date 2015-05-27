@@ -9,7 +9,6 @@ class Level < ActiveRecord::Base
   validates :title, length: { maximum: 8,
     too_long: "%{count} characters is the maximum allowed" }
   validates :test, :test_id, :title, presence: true 
-  validates :test_id, numericality: { only_integer: true }
 
 end
 
