@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Question Plays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Level play</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @question_plays.each do |question_play| %>
+      <tr>
+        <td><%= question_play.user_id %></td>
+        <td><%= question_play.question_id %></td>
+        <td><%= question_play.answer_id %></td>
+        <td><%= question_play.level_play_id %></td>
+        <td><%= question_play.score %></td>
+        <td><%= link_to 'Show', question_play %></td>
+        <td><%= link_to 'Edit', edit_question_play_path(question_play) %></td>
+        <td><%= link_to 'Destroy', question_play, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question play', new_question_play_path %>
