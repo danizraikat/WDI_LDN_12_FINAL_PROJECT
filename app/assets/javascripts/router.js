@@ -7,7 +7,7 @@ define([
 ], function($, _, Backbone, ApplicationView, TestsIndexView){
 
   var layout = function(){
-    new ApplicationView().render();
+    new ApplicationView().render(); 
   }
 
   var Router = Backbone.Router.extend({
