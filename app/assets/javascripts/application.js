@@ -12,3 +12,4 @@ require([
 ], function(App){
   App.initialize();
 });
+$(function(){ $(document).foundation(); });
