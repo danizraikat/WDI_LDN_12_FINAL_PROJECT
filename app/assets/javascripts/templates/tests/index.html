@@ -1,0 +1,24 @@
+<main>
+  <div class="t-index">
+    <h1 class="h1-t-index">Listing Tests</h1>
+
+    <table>
+      <tbody>
+        <% _.each(tests, function(test){ %>
+          <tr>
+            <td class="test-image"><%= test.get("image") %></td>        
+          </tr>
+          <tr>
+            <td class="test-name"><%= test.get("name") %></td>        
+          </tr>
+          <tr>
+            <td class="test-brief"><%= test.get("brief") %></td>        
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+  <br/>
+
+  <p class="new-index"><a href="#tests/new"> New Test</a></p>
+</main>

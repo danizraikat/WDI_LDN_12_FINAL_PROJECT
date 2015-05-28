@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "tests#index" 
+  root "statics#index" 
   resources :question_plays
   resources :level_plays
   resources :answers

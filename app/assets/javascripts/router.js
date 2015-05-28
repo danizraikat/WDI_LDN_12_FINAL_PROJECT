@@ -3,7 +3,8 @@ define([
   'underscore',
   'backbone',
   'views/application',
-], function($, _, Backbone, ApplicationView){
+  'views/tests/index'
+], function($, _, Backbone, ApplicationView, TestsIndexView){
 
   var layout = function(){
     new ApplicationView().render();
@@ -12,6 +13,7 @@ define([
   var Router = Backbone.Router.extend({
     routes: {
       ''               : 'home',
+      'tests'          : 'testsIndex',
       '*actions'       : 'defaultAction'
     }
   });
@@ -25,14 +27,17 @@ define([
       console.log("Home");
     });
 
-
+    router.on('route:testsIndex', function(){
+      console.log("Tests Index");
+      new TestsIndexView();
+    });
 
     router.on('route:defaultAction', function(actions) {
       console.log('No route:', actions);
     });
 
     Backbone.history.start();
-  }
+  }   
 
   return {
     initialize: initialize
