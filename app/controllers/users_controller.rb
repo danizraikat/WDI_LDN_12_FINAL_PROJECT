@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-before_action :authenticate_user!
+  #before_action :authenticate_user!
 
   def index 
     @users = User.all
@@ -16,3 +16,6 @@ before_action :authenticate_user!
   #     params.require(:image).permit(:name, :graffiti_image, :remote_graffiti_image_url)
   #   end
 end
+
+
+
