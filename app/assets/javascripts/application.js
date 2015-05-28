@@ -10,6 +10,9 @@ require.config({
 require([
   'app',
 ], function(App){
-  App.initialize();
+  if ($('main').length > 0) {
+    App.initialize();
+  }
 });
-$(function(){ $(document).foundation(); });
+
+// $(function(){ $(document).foundation(); });

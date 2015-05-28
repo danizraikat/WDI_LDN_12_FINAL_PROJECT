@@ -2,13 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/application',
   'views/tests/index'
-], function($, _, Backbone, ApplicationView, TestsIndexView){
-
-  var layout = function(){
-    new ApplicationView().render(); 
-  }
+], function($, _, Backbone, TestsIndexView){
 
   var Router = Backbone.Router.extend({
     routes: {
@@ -19,8 +14,6 @@ define([
   });
 
   var initialize = function() {
-    layout(); 
-
     var router = new Router;
 
     router.on('route:home', function(){

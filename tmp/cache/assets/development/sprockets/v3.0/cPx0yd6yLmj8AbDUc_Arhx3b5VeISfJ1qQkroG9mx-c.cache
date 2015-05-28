@@ -1,0 +1,38 @@
+{:uriI"’file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/application.html?type=text/html&id=58467850c80b55373211ebf44530250e806319b25d6c45742a1084e149b727c0:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"{/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/application.html;T:	nameI"templates/application;T:logical_pathI"templates/application.html;T:content_typeI"text/html;T:sourceI"∂<body>
+  <div class="fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1 class="h1-navbar"><a href="#questions">BUNDLE</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <!-- <ul class="right">
+          <li class="active"><a href="#">Right Button Active</a></li>
+          <li class="has-dropdown">
+            <a href="#">Right Button Dropdown</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+              <li class="active"><a href="#">Active link in dropdown</a></li>
+            </ul>
+          </li>
+        </ul> -->
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <% _.each(test, function(test){ %>
+            <li><a href="#"class="test-name"><%= test.get("name") %></a></li>
+          <% }); %>
+        </ul>        
+      </section>
+    </nav>
+  </div>
+</body>
+<main></main> ;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"âfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/application.html;TT:charsetI"
+utf-8;F:digest"%Çë˜aªK6çeÔ‚§v∂ëb∑D*û™ñîEvëZ:lengthi∂:integrityI"9sha-256-gpEY92EUuxtLNo1l7wXipHa2kQdit0QqnqqWlEV2kVo=;T:dependencies_digest"%7 ¸Ø—®;áÒ<ñ¡‡I;|Ë® `≈È9U∆b·|b˘^:idI"E58467850c80b55373211ebf44530250e806319b25d6c45742a1084e149b727c0;F:
+mtimel+˘)gU
