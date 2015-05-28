@@ -10,4 +10,9 @@ before_action :authenticate_user!
     @user = User.find(params[:id]) 
   end
 
+  #HOW TO EDIT THIS CODE SO THAT IT RELATES TO USER IMAGES?
+  # private
+  #   def image_params
+  #     params.require(:image).permit(:name, :graffiti_image, :remote_graffiti_image_url)
+  #   end
 end
