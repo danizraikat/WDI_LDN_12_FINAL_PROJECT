@@ -10739,3 +10739,10 @@ Processing by TestsController#index as JSON
   [1m[35mTest Load (87.7ms)[0m  SELECT "tests".* FROM "tests"
   Rendered tests/index.json.jbuilder (553.5ms)
 Completed 200 OK in 808ms (Views: 523.3ms | ActiveRecord: 88.5ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-28 15:15:07 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.4ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  Rendered tests/index.json.jbuilder (3.0ms)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.4ms)
