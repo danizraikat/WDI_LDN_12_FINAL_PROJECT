@@ -1,0 +1,33 @@
+<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+
+    <table>
+      <tbody>
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <tr>
+            <% _.each(level_play.get("answers"), function(answer){ %>
+              <tr>
+                <td class="answer"><%=answer.title %></td>
+                <td class="answer"><%=answer.content %></td>
+              </tr>
+            <% }); %>
+          </tr>            
+          <tr>
+            <td class="submit">
+              <button class="submit-button">SUBMIT</button>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>

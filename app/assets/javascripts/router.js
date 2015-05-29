@@ -3,14 +3,16 @@ define([
   'underscore',
   'backbone',
   'views/tests/index',
-  'views/tests/show'
-], function($, _, Backbone, TestsIndexView, TestsShowView){
+  'views/tests/show',
+  'views/level_plays/show'
+], function($, _, Backbone, TestsIndexView, TestsShowView, LevelPlaysShowView){
 
   var Router = Backbone.Router.extend({
     routes: {
       ''               : 'home',
       'tests'          : 'testsIndex',
       'tests/:id'      : 'testsShow',
+      'level_plays/:id': 'level_playsShow',
       '*actions'       : 'defaultAction'
     }
   });
@@ -30,6 +32,11 @@ define([
     router.on('route:testsShow', function(id){
       console.log("Tests Show");
       new TestsShowView(id);
+    });          
+
+    router.on('route:level_playsShow', function(id){
+      console.log("LevelPlays Show");
+      new LevelPlaysShowView(id);
     });          
 
     router.on('route:defaultAction', function(actions) {

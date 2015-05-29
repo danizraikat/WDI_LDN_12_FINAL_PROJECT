@@ -1,0 +1,23 @@
+{:uriI"Ôfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html?type=text/html&id=65994c8d01cdaf817dedbaa6d3b3c8c25a3eb71845082f3655d22c5c4fdc0a36:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html;T:	nameI"templates/tests/show;T:logical_pathI"templates/tests/show.html;T:content_typeI"text/html;T:sourceI"F<main>
+  <div class="t-show">
+    <h1 class="h1-t-show"><%= test.get("name") %></h1>
+
+    <table>
+      <tbody>
+        <% _.each(test.get("levels"), function(level){ %>
+          <tr>
+            <td class="level-title"><%= level.title %></td>
+            <td class="level-brief"><%= level.brief; debugger %></td>
+            <td><button><a href="/#level_plays/<%= level_play.get("id") %>">Create level_play</button></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div> 
+  <br/>
+
+  <!-- <p class="new-index"><a href="#tests/new"> New Test</a></p> -->
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"ˆfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html;TT:charsetI"
+utf-8;F:digest"%¤f>GÇ2ÇêÊ+i¿ÍëÉ;rt³âh]ˆ“¹X/úø:lengthiF:integrityI"9sha-256-pGaNPkfHMsfqDcorab/N68k7cnSz4h5oXYiTuVgv+vg=;T:dependencies_digest"%ûÉ“¢›šà¾î=–m iiŸ­ÌcX5¾[Þ†5`jãM:idI"E65994c8d01cdaf817dedbaa6d3b3c8c25a3eb71845082f3655d22c5c4fdc0a36;F:
+mtimel+9shU

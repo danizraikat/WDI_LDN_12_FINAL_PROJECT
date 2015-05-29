@@ -8,7 +8,7 @@ define([
       image: "",
       name: "",
       brief: "",
-      levels: []
+      levels: [],
     }
   });
 });
