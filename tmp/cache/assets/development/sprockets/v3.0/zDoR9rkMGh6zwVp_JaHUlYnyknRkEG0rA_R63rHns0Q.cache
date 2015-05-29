@@ -1,0 +1,36 @@
+{:uriI"Úfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=6726b0453ae5c0948b2d7b2d7eee3ed16766f206472e1d5c68eb55c2c53e8ff6:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"€/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"w<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+
+    <table>
+      <tbody>
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <!-- <tr>
+            <% _.each(question.get("answers"), function(answer){ %>
+              <tr>
+                <td class="answer"><%=answer.title %></td>
+                <td class="answer"><%=answer.content %></td>
+              </tr>
+            <% }); %>
+          </tr>       -->      
+          <tr>
+            <td class="submit">
+              <button class="submit-button">SUBMIT</button>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Žfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%(R[IË’Âe2øÈa@ô‡,;r‘•¢Åõc¨	T:lengthiw:integrityI"9sha-256-KAhSW0nLksJlMvjIYUD0EYcsO3KRDwOVosX1Y6gXCVQ=;T:dependencies_digest"%âd˜Ž””GîWšƒé²uvbŒñ²	Î®ƒ7â(›o•:idI"E6726b0453ae5c0948b2d7b2d7eee3ed16766f206472e1d5c68eb55c2c53e8ff6;F:
+mtimel+“ŒhU

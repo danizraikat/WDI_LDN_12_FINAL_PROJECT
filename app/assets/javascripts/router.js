@@ -12,7 +12,7 @@ define([
       ''               : 'home',
       'tests'          : 'testsIndex',
       'tests/:id'      : 'testsShow',
-      'level_plays/:id': 'level_playsShow',
+      'level_plays/:id': 'levelPlaysShow',
       '*actions'       : 'defaultAction'
     }
   });
@@ -34,7 +34,7 @@ define([
       new TestsShowView(id);
     });          
 
-    router.on('route:level_playsShow', function(id){
+    router.on('route:levelPlaysShow', function(id){
       console.log("LevelPlays Show");
       new LevelPlaysShowView(id);
     });          

@@ -12,13 +12,13 @@
             <td class="question"><%= question.content %></td>        
           </tr>
           <tr>
-            <% _.each(level_play.get("answers"), function(answer){ %>
+            <% _.each(question.get("answers"), function(answer){ %>
               <tr>
                 <td class="answer"><%=answer.title %></td>
                 <td class="answer"><%=answer.content %></td>
               </tr>
             <% }); %>
-          </tr>            
+          </tr>               
           <tr>
             <td class="submit">
               <button class="submit-button">SUBMIT</button>

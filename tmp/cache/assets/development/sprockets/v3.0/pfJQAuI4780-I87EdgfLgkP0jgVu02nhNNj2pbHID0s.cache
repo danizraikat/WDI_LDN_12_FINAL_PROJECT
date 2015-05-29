@@ -1,0 +1,38 @@
+{:uriI"Úfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=b24fb355d0d8dda6e6e099eda04fefb9e352dd1e2f27dbe32b0e9c7aa91c20f1:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"€/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"·<main>
+  <div class="m-index">
+    <h1 class="h1-m-index"><%= test.get("name") %></h1>
+    <h2 class="h2-m-index"><%= level.get("title") %></h2>
+
+    <table>
+      <tbody>
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <tr>
+            <% _.each(question.get("answers"), function(answer){ %>
+              <tr>
+                <td class="answer"><%=answer.title %></td>
+                <td class="answer"><%=answer.content %></td>
+              </tr>
+            <% }); %>
+          </tr>               
+          <tr>
+            <td class="submit">
+              <button class="submit-button">SUBMIT</button>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Žfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%@<ƒ²L¹Î%yqCre€
+{çä_`)Ë† ~á¦:lengthi·:integrityI"9sha-256-QDyDsky5ziV5cUNyZQ2ACnvn5F9gCynLhqAbfuGdFKY=;T:dependencies_digest"%•:ô4…\aE¬L'uÉ	‹F§MÄnZÃ±ª	¢®ú¹¥:idI"Eb24fb355d0d8dda6e6e099eda04fefb9e352dd1e2f27dbe32b0e9c7aa91c20f1;F:
+mtimel+hU

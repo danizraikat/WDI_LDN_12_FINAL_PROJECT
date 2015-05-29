@@ -1,0 +1,36 @@
+{:uriI"⁄file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=2b04260a0c7e24536816d1a3a4317a3007dfafe533b2ca1748d2ed4ef14f07bc:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"Ä/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"n<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+
+    <table>
+      <tbody>
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <tr>
+            <% _.each(question.get("answers"), function(answer){ %>
+              <tr>
+                <td class="answer"><%=answer.title %></td>
+                <td class="answer"><%=answer.content %></td>
+              </tr>
+            <% }); %>
+          </tr>            
+          <tr>
+            <td class="submit">
+              <button class="submit-button">SUBMIT</button>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"éfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%r(’ØÓƒÆÜxU*©>á%PËWyê≠d∞÷:lengthin:integrityI"9sha-256-cijVr+4SxK6GH3gfVSqpED7wDYclUOhXeZCtHxtksNY=;T:dependencies_digest"%RzÑ]ƒtYj.Ãµwœ0å´AeTÑó+äÁx{ﬁîn:idI"E2b04260a0c7e24536816d1a3a4317a3007dfafe533b2ca1748d2ed4ef14f07bc;F:
+mtimel+¢ãhU

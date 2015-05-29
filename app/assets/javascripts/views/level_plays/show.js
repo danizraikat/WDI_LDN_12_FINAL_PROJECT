@@ -10,8 +10,9 @@ define([
     el: 'main',
     initialize:function(id){
       var self = this;
-      this.test = new LevelPlay({id: id});
-      this.test.fetch({
+
+      this.level_play = new LevelPlay({id: id});
+      this.level_play.fetch({
         success: function(data) {
           self.render(data);
           console.log(data)
@@ -20,16 +21,16 @@ define([
     },
     render: function(data) {
       var template = _.template(LevelPlayTemplate);
-      this.$el.html(template({ test: data }));
+      this.$el.html(template({ level_play: data }));
     },
 
     events: {
       "click .delete": "delete"
     },
-
+                                          
     delete: function(ev){
       ev.preventDefault();
-      this.test.destroy({
+      this.level_play.destroy({
         success: function() {
           Backbone.history.navigate('level_plays', true);
         }
