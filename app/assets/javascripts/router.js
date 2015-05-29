@@ -2,13 +2,15 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/tests/index'
-], function($, _, Backbone, TestsIndexView){
+  'views/tests/index',
+  'views/tests/show'
+], function($, _, Backbone, TestsIndexView, TestsShowView){
 
   var Router = Backbone.Router.extend({
     routes: {
       ''               : 'home',
       'tests'          : 'testsIndex',
+      'tests/:id'      : 'testsShow',
       '*actions'       : 'defaultAction'
     }
   });
@@ -24,6 +26,11 @@ define([
       console.log("Tests Index");
       new TestsIndexView();
     });
+
+    router.on('route:testsShow', function(){
+      console.log("Tests Show");
+      new TestsShowView();
+    });          
 
     router.on('route:defaultAction', function(actions) {
       console.log('No route:', actions);

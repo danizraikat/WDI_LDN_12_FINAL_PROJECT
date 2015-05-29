@@ -1,35 +1,22 @@
 <main>
-  <div class="m-index">
-    <h1 class="h1-m-index">NO CHEATING</h1>
+  <div class="t-show">
+    <h1 class="h1-t-show"><%= test.get("name") %></h1>
 
     <table>
-      <!-- <thead>
-        <tr>
-          <th>Content</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead> -->
-
-
       <tbody>
-        <% _.each(mathqs, function(mathq){ %>
+        <!-- if level's test_id = test.id -->
+        <% _.each(levels, function(level){ %>
           <tr>
-            <td class="mathq-data"><%= mathq.get("content") %></td>        
+            <td class="level-title"><%= level.get("title") %></td>        
+          </tr>
           <tr>
-            <td class="option1-2-3-data">
-              <button class="option1-button"><a class="link" href="#"><%= mathq.get("option1") %></a></button>
-              <button class="option2-button"><a class="link" href="#"><%= mathq.get("option2") %></a></button>
-              <button class="option3-button"><a class="link" href="#"><%= mathq.get("option3") %></a></button>
-            </td>
-            <td class="check-data">
-              <button class="check-button"><a href="/#mathqs/<%= mathq.get("id") %>">BUNDLE</button>
-            </td>
+            <td class="level-brief"><%= level.get("brief") %></td>        
           </tr>
         <% }); %>
       </tbody>
     </table>
-  </div>
+  </div> 
   <br/>
 
-  <p class="new-index"><a href="#mathqs/new"> New Question</a></p>
+  <!-- <p class="new-index"><a href="#tests/new"> New Test</a></p> -->
 </main>
