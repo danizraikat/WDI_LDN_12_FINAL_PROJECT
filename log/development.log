@@ -16251,3 +16251,27 @@ Processing by TestsController#index as JSON
   [1m[35mTest Load (0.4ms)[0m  SELECT "tests".* FROM "tests"
   Rendered tests/index.json.jbuilder (3.3ms)
 Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/1.json" for ::1 at 2015-05-29 11:21:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (16.8ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered tests/show.json.jbuilder (23.8ms)
+Completed 200 OK in 264ms (Views: 135.2ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:21:40 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  Rendered tests/index.json.jbuilder (5.1ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/1.json" for ::1 at 2015-05-29 11:21:50 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered tests/show.json.jbuilder (0.8ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
