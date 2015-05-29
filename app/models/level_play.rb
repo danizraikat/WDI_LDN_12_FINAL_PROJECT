@@ -4,6 +4,6 @@ class LevelPlay < ActiveRecord::Base
   has_many :question_plays
 
   validates_associated :user, :level
-  validates :max_score, :score, numericality: { only_integer: true }
-  validates :user_id, :level_id, :max_score, :score, presence: true 
+  validates :score, numericality: { only_integer: true }
+  validates :user_id, :level_id, :score, presence: true 
 end

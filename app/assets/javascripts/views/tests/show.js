@@ -14,6 +14,7 @@ define([
       this.test.fetch({
         success: function(data) {
           self.render(data);
+          console.log(data)
         }
       })
     },

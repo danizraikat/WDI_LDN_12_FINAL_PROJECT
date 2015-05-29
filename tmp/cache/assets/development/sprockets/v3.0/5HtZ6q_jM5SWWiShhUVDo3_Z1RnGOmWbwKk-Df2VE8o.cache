@@ -1,0 +1,23 @@
+{:uriI"Ôfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html?type=text/html&id=440f315d618617224ed8dcbeca0359d8608b1368b92e573708a67564bf541832:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html;T:	nameI"templates/tests/show;T:logical_pathI"templates/tests/show.html;T:content_typeI"text/html;T:sourceI"<main>
+  <div class="t-show">
+    <h1 class="h1-t-show"><%= test.get("name") %></h1>
+
+    <table>
+      <tbody>
+        <% _.each(test.get("levels"), function(level){ %>
+          <tr>
+            <td class="level-title"><%= level.title %></td>
+            <td class="level-brief"><%= level.brief %></td>
+            <td><button>Create level_play</button></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div> 
+  <br/>
+
+  <!-- <p class="new-index"><a href="#tests/new"> New Test</a></p> -->
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"ˆfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html;TT:charsetI"
+utf-8;F:digest"%Ú88aö¬ÎAu$¶n2–ú«–Éx÷×œcšË—Ú:lengthi:integrityI"9sha-256-2jg4G2H2rBvOQQZ1JLZuBDKW+quWyXj315xjmhHLl9o=;T:dependencies_digest"%ÿø®ð}zhp%‰DÉ&é(ˆ>ü«¢Müe2Øøw:idI"E440f315d618617224ed8dcbeca0359d8608b1368b92e573708a67564bf541832;F:
+mtimel+²JhU

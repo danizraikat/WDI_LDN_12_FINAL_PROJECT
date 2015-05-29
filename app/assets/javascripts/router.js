@@ -27,9 +27,9 @@ define([
       new TestsIndexView();
     });
 
-    router.on('route:testsShow', function(){
+    router.on('route:testsShow', function(id){
       console.log("Tests Show");
-      new TestsShowView();
+      new TestsShowView(id);
     });          
 
     router.on('route:defaultAction', function(actions) {

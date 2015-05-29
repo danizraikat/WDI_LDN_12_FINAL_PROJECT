@@ -4,13 +4,11 @@
 
     <table>
       <tbody>
-        <!-- if level's test_id = test.id -->
-        <% _.each(levels, function(level){ %>
+        <% _.each(test.get("levels"), function(level){ %>
           <tr>
-            <td class="level-title"><%= level.get("title") %></td>        
-          </tr>
-          <tr>
-            <td class="level-brief"><%= level.get("brief") %></td>        
+            <td class="level-title"><%= level.title %></td>
+            <td class="level-brief"><%= level.brief %></td>
+            <td><button>Create level_play</button></td>
           </tr>
         <% }); %>
       </tbody>

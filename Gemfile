@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
+
 gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'foundation-rails'
-
+gem 'active_model_serializers'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

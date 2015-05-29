@@ -7,7 +7,8 @@ define([
     defaults: {
       image: "",
       name: "",
-      brief: ""
+      brief: "",
+      levels: []
     }
   });
 });

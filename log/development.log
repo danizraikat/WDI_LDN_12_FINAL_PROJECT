@@ -16275,3 +16275,2512 @@ Processing by TestsController#show as JSON
   [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
   Rendered tests/show.json.jbuilder (0.8ms)
 Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:27:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TestsController#index as JSON
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+  Rendered tests/index.json.jbuilder (15.2ms)
+Completed 200 OK in 72ms (Views: 49.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:27:46 +0100
+Processing by TestsController#index as JSON
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template tests/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/views"
+  * "/Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/foundation-rails-5.5.2.1/app/views"
+  * "/Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/devise-3.4.1/app/views"
+):
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.9ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (411.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (241.1ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (827.9ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:28:42 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.6ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.0ms)
+
+ArgumentError (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+  app/serializers/test_serializer.rb:5:in `url'
+  app/controllers/tests_controller.rb:6:in `index'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (147.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (121.8ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (270.0ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:28:58 +0100
+Processing by TestsController#index as JSON
+  [1m[35mTest Load (1.9ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 22ms (Views: 10.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:29:22 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.6ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:32:34 +0100
+Processing by TestsController#index as JSON
+  [1m[35mTest Load (0.6ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tests/1.json" for ::1 at 2015-05-29 11:32:40 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 74ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:32:45 +0100
+Processing by TestsController#index as JSON
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:34:56 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.7ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (20.9ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 151ms (Views: 98.1ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:38:23 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.6ms)
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 809ms (Views: 807.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:38:24 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:38:24 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:38:25 +0100
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:38:26 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:38:28 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 121ms (Views: 119.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:38:28 +0100
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:38:28 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:38:29 +0100
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:38:29 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.4ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tests.json" for ::1 at 2015-05-29 11:38:30 +0100
+Processing by TestsController#index as JSON
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+  [1m[36mLevel Load (0.5ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+  [1m[35mLevel Load (0.3ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 2]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 3]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 4]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 5]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 6]]
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:38:32 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:39:01 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.4ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 110ms (Views: 109.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:39:01 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:01 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:01 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:01 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:01 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:39:02 +0100
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:39:02 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.3ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:39:27 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:39:27 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:27 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:27 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:27 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:27 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:39:28 +0100
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:39:28 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.3ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:40:13 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 92ms (Views: 89.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:40:13 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:40:14 +0100
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:40:14 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.7ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.3ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tests/1.json" for ::1 at 2015-05-29 11:40:26 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.9ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tests/1.json" for ::1 at 2015-05-29 11:40:57 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:41:02 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 103ms (Views: 102.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:41:02 +0100
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:41:03 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:41:14 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:41:14 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:14 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:41:15 +0100
+
+
+Started GET "/tests" for ::1 at 2015-05-29 11:41:15 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (1.0ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+  [1m[36mLevel Load (1.3ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:41:32 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.2ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 122ms (Views: 121.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:32 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:32 +0100
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:41:32 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:32 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:32 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:41:32 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:32 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:41:33 +0100
+
+
+Started GET "/" for ::1 at 2015-05-29 11:42:18 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[36mTest Load (0.5ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+Completed 200 OK in 125ms (Views: 118.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:42:18 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:42:19 +0100
+
+
+Started GET "/tests/1" for ::1 at 2015-05-29 11:42:19 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.4ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:42:31 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.3ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 113ms (Views: 112.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:42:31 +0100
+
+
+Started GET "/tests/1" for ::1 at 2015-05-29 11:42:31 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/2" for ::1 at 2015-05-29 11:42:37 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 2]]
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/3" for ::1 at 2015-05-29 11:42:37 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLevel Load (0.1ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/4" for ::1 at 2015-05-29 11:42:38 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 4]]
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/5" for ::1 at 2015-05-29 11:42:39 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+Completed 200 OK in 20ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/6" for ::1 at 2015-05-29 11:42:40 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mLevel Load (5.4ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 6]]
+Completed 200 OK in 25ms (Views: 18.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:42:51 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[36mTest Load (1.0ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+Completed 200 OK in 135ms (Views: 133.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:42:51 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:51 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:42:52 +0100
+
+
+Started GET "/tests/6" for ::1 at 2015-05-29 11:42:52 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[35mTest Load (3.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 11ms (Views: 3.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-05-29 11:42:53 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/2" for ::1 at 2015-05-29 11:42:55 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mTest Load (0.3ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tests/3" for ::1 at 2015-05-29 11:43:02 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 3]]
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/4" for ::1 at 2015-05-29 11:43:03 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLevel Load (0.5ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 4]]
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tests/5" for ::1 at 2015-05-29 11:43:04 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 5]]
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/6" for ::1 at 2015-05-29 11:43:05 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[35mTest Load (0.3ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-05-29 11:43:06 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:43:21 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (1.5ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 146ms (Views: 143.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:43:21 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:43:22 +0100
+
+
+Started GET "/tests/1" for ::1 at 2015-05-29 11:43:22 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/3" for ::1 at 2015-05-29 11:43:23 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 3]]
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/4" for ::1 at 2015-05-29 11:43:24 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 4]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/5" for ::1 at 2015-05-29 11:43:25 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 5]]
+Completed 200 OK in 27ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tests/6" for ::1 at 2015-05-29 11:43:27 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 6]]
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:45:41 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+Completed 200 OK in 100ms (Views: 99.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:45:42 +0100
+
+
+Started GET "/tests/6" for ::1 at 2015-05-29 11:45:42 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 11:46:13 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.2ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 11:46:13 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 11:46:14 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 11:46:14 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 11:46:14 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 11:46:14 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 11:46:14 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 11:46:14 +0100
+
+
+Started GET "/tests/6" for ::1 at 2015-05-29 11:46:14 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 6]]
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-29 12:17:12 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[36mTest Load (23.4ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+Completed 200 OK in 663ms (Views: 638.6ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-29 12:17:14 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-29 12:17:15 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-29 12:17:15 +0100
+
+
+Started GET "/tests/6" for ::1 at 2015-05-29 12:17:15 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[35mTest Load (0.3ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mLevel Load (16.8ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 6]]
+Completed 200 OK in 105ms (Views: 84.7ms | ActiveRecord: 17.5ms)
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (22.9ms)[0m  select sqlite_version(*)
+  [1m[36m (22.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (34.2ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20150526140213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "level_id" integer, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526140213"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20150526151227)
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "title" varchar, "content" text, "correctness" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526151227"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevelPlays (20150526154740)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "level_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "level_id" integer, "max_score" varchar, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526154740"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestionPlays (20150527084828)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "question_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "question_id" integer, "answer_id" integer, "level_play_id" integer, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150527084828"]]
+  [1m[36m (41.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$G4SvxgzU9o2K03u5o.bP4uNWkyVxszFoqXgUSHYGVogMA/MIJjbDe"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-29 11:21:33.535895"], ["updated_at", "2015-05-29 11:21:33.535895"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1
+  [1m[36mSQL (35.7ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-29 11:21:33.572928"], ["updated_at", "2015-05-29 11:21:33.572928"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.3ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-29 11:21:33.616703"], ["updated_at", "2015-05-29 11:21:33.616703"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (29.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (37.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (20.0ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20150526140213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "level_id" integer, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526140213"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20150526151227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "title" varchar, "content" text, "correctness" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526151227"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevelPlays (20150526154740)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "level_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "level_id" integer, "max_score" varchar, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526154740"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestionPlays (20150527084828)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "question_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "question_id" integer, "answer_id" integer, "level_play_id" integer, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150527084828"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$4EpXy5uJ4UGgEs.1fWZwD.oM6j2ZSvckc5SNtLgdtRLgAwReQWPB2"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-29 11:23:08.431337"], ["updated_at", "2015-05-29 11:23:08.431337"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-29 11:23:08.467685"], ["updated_at", "2015-05-29 11:23:08.467685"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.5ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-29 11:23:08.473558"], ["updated_at", "2015-05-29 11:23:08.473558"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20150526140213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "level_id" integer, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526140213"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20150526151227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "title" varchar, "content" text, "correctness" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526151227"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevelPlays (20150526154740)
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "level_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "level_id" integer, "max_score" varchar, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526154740"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestionPlays (20150527084828)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "question_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "question_id" integer, "answer_id" integer, "level_play_id" integer, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150527084828"]]
+  [1m[36m (21.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$8zL9PDhCAq3RZcpWecYu/eFcNb00h4lyEp2iuN0BgfNn6t4fWp2K."], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-29 11:25:32.858557"], ["updated_at", "2015-05-29 11:25:32.858557"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-29 11:25:32.878405"], ["updated_at", "2015-05-29 11:25:32.878405"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-29 11:25:32.883880"], ["updated_at", "2015-05-29 11:25:32.883880"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20150526140213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "level_id" integer, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526140213"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20150526151227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "title" varchar, "content" text, "correctness" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526151227"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevelPlays (20150526154740)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "level_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "level_id" integer, "max_score" varchar, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526154740"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestionPlays (20150527084828)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "question_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "question_id" integer, "answer_id" integer, "level_play_id" integer, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150527084828"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$C4I8oR28Ix/U6g5gHXFw5Oodf8ir/VyjK6CBzhkzHwdle5N3Q/w3K"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-29 11:26:57.882849"], ["updated_at", "2015-05-29 11:26:57.882849"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-29 11:26:57.903458"], ["updated_at", "2015-05-29 11:26:57.903458"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-29 11:26:57.909498"], ["updated_at", "2015-05-29 11:26:57.909498"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "levels" ("title", "brief", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Level 1"], ["brief", "Have you heard of JS?"], ["test_id", 1], ["created_at", "2015-05-29 11:26:57.991281"], ["updated_at", "2015-05-29 11:26:57.991281"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("test_id", "title", "content", "level_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["test_id", 1], ["title", "Question 1"], ["content", "What is JavaScript?"], ["level_id", 1], ["created_at", "2015-05-29 11:26:58.056598"], ["updated_at", "2015-05-29 11:26:58.056598"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "1"], ["content", "I know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:26:58.102129"], ["updated_at", "2015-05-29 11:26:58.102129"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "2"], ["content", "I don't know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:26:58.110897"], ["updated_at", "2015-05-29 11:26:58.110897"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "3"], ["content", "I kinda know what it is"], ["correctness", "t"], ["question_id", 1], ["created_at", "2015-05-29 11:26:58.121239"], ["updated_at", "2015-05-29 11:26:58.121239"]]
+  [1m[36m (38.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$egiJie3.0gdsblqLUyNEh.56.Gxy.pxq.1z75htzvV9cUadkTqcAK"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-29 11:26:58.266437"], ["updated_at", "2015-05-29 11:26:58.266437"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20150526140213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "level_id" integer, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526140213"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20150526151227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "title" varchar, "content" text, "correctness" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526151227"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevelPlays (20150526154740)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "level_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "level_id" integer, "max_score" varchar, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526154740"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestionPlays (20150527084828)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "question_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "question_id" integer, "answer_id" integer, "level_play_id" integer, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150527084828"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$8cDH4H3hY97.ExJfW.XA.eVKPfdbE11oVpEXUkcx4rc/JkISVcjsy"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-29 11:27:38.765827"], ["updated_at", "2015-05-29 11:27:38.765827"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-29 11:27:38.784393"], ["updated_at", "2015-05-29 11:27:38.784393"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-29 11:27:38.789507"], ["updated_at", "2015-05-29 11:27:38.789507"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "levels" ("title", "brief", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Level 1"], ["brief", "Have you heard of JS?"], ["test_id", 1], ["created_at", "2015-05-29 11:27:38.832361"], ["updated_at", "2015-05-29 11:27:38.832361"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("test_id", "title", "content", "level_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["test_id", 1], ["title", "Question 1"], ["content", "What is JavaScript?"], ["level_id", 1], ["created_at", "2015-05-29 11:27:38.866005"], ["updated_at", "2015-05-29 11:27:38.866005"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "1"], ["content", "I know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:27:38.889442"], ["updated_at", "2015-05-29 11:27:38.889442"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "2"], ["content", "I don't know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:27:38.896714"], ["updated_at", "2015-05-29 11:27:38.896714"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "3"], ["content", "I kinda know what it is"], ["correctness", "t"], ["question_id", 1], ["created_at", "2015-05-29 11:27:38.906120"], ["updated_at", "2015-05-29 11:27:38.906120"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$RP9LyCooQc3P7rTnnk1ocejrrBrJcuEI15GgvvNuCnTNfFxY8REje"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-29 11:27:39.005834"], ["updated_at", "2015-05-29 11:27:39.005834"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "level_plays" ("level_id", "score", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["level_id", 1], ["score", "0"], ["user_id", 2], ["created_at", "2015-05-29 11:27:39.037335"], ["updated_at", "2015-05-29 11:27:39.037335"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'dani@dani.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20150526140213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "level_id" integer, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526140213"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20150526151227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "title" varchar, "content" text, "correctness" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526151227"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevelPlays (20150526154740)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "level_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "level_id" integer, "max_score" varchar, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526154740"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestionPlays (20150527084828)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "question_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "question_id" integer, "answer_id" integer, "level_play_id" integer, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150527084828"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$GcpJMeTpC5baxzvBPH56f.PPfjKsjDkI6la9120U4mJgckkrnmHh6"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-29 11:28:31.179188"], ["updated_at", "2015-05-29 11:28:31.179188"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-29 11:28:31.200798"], ["updated_at", "2015-05-29 11:28:31.200798"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-29 11:28:31.207136"], ["updated_at", "2015-05-29 11:28:31.207136"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "levels" ("title", "brief", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Level 1"], ["brief", "Have you heard of JS?"], ["test_id", 1], ["created_at", "2015-05-29 11:28:31.248135"], ["updated_at", "2015-05-29 11:28:31.248135"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("test_id", "title", "content", "level_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["test_id", 1], ["title", "Question 1"], ["content", "What is JavaScript?"], ["level_id", 1], ["created_at", "2015-05-29 11:28:31.277744"], ["updated_at", "2015-05-29 11:28:31.277744"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "1"], ["content", "I know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:28:31.302836"], ["updated_at", "2015-05-29 11:28:31.302836"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "2"], ["content", "I don't know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:28:31.310878"], ["updated_at", "2015-05-29 11:28:31.310878"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.3ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "3"], ["content", "I kinda know what it is"], ["correctness", "t"], ["question_id", 1], ["created_at", "2015-05-29 11:28:31.319162"], ["updated_at", "2015-05-29 11:28:31.319162"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$wqIRClk1jUHqf8ajiqnwIOPn/isvSeG7XK2dXddbs9EOOztKJ6Jge"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-29 11:28:31.418154"], ["updated_at", "2015-05-29 11:28:31.418154"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "level_plays" ("level_id", "score", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["level_id", 1], ["score", "0"], ["user_id", 2], ["created_at", "2015-05-29 11:28:31.447227"], ["updated_at", "2015-05-29 11:28:31.447227"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'dani@dani.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mTest Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20150526094433)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/db/migrate/20150526094433_devise_create_users.rb:34)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526094433"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddImageAndNameAndLocationAndWebsiteAndBriefToUsers (20150526095348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "image" varchar[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "users" ADD "name" varchar
+  [1m[36m (7.1ms)[0m  [1mALTER TABLE "users" ADD "location" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "website" text
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "brief" text[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526095348"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddRoleToUsers (20150526100800)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526100800"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTests (20150526110432)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "name" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526110432"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevels (20150526111639)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "levels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "title" varchar, "brief" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526111639"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestions (20150526140213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "test_id" integer, "level_id" integer, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526140213"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20150526151227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "title" varchar, "content" text, "correctness" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526151227"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLevelPlays (20150526154740)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "level_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "level_id" integer, "max_score" varchar, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150526154740"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQuestionPlays (20150527084828)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "question_plays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "question_id" integer, "answer_id" integer, "level_play_id" integer, "score" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150527084828"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dani@dani.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dani@dani.com"], ["encrypted_password", "$2a$10$H6f6fgAwf8XYhJf1KArcRel12jzn32Mmb1b2VkMorw9gnK/8A9n3q"], ["name", "Dani Al-Zraykat"], ["brief", "Happy to be the first user of this website"], ["role", "Admin"], ["created_at", "2015-05-29 11:28:48.894781"], ["updated_at", "2015-05-29 11:28:48.894781"]]
+  [1m[35m (20.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'JavaScript' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "JavaScript"], ["brief", "First test on the website"], ["created_at", "2015-05-29 11:28:48.934928"], ["updated_at", "2015-05-29 11:28:48.934928"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE "tests"."name" = 'Ruby' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tests" ("image", "name", "brief", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "http://www.javatpoint.com/images/javascript/javascript_logo.png"], ["name", "Ruby"], ["brief", "First Ruby test on the website"], ["created_at", "2015-05-29 11:28:48.941376"], ["updated_at", "2015-05-29 11:28:48.941376"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "levels" ("title", "brief", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Level 1"], ["brief", "Have you heard of JS?"], ["test_id", 1], ["created_at", "2015-05-29 11:28:48.987182"], ["updated_at", "2015-05-29 11:28:48.987182"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("test_id", "title", "content", "level_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["test_id", 1], ["title", "Question 1"], ["content", "What is JavaScript?"], ["level_id", 1], ["created_at", "2015-05-29 11:28:49.019640"], ["updated_at", "2015-05-29 11:28:49.019640"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "1"], ["content", "I know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:28:49.046559"], ["updated_at", "2015-05-29 11:28:49.046559"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTest Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "2"], ["content", "I don't know what it is"], ["correctness", "f"], ["question_id", 1], ["created_at", "2015-05-29 11:28:49.056095"], ["updated_at", "2015-05-29 11:28:49.056095"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTest Exists (0.2ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("title", "content", "correctness", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "3"], ["content", "I kinda know what it is"], ["correctness", "t"], ["question_id", 1], ["created_at", "2015-05-29 11:28:49.063496"], ["updated_at", "2015-05-29 11:28:49.063496"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gerry@gerry.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "name", "brief", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "gerry@gerry.com"], ["encrypted_password", "$2a$10$aBdyO2bO0V7hsfcTtFfGDeWp4D2lDRkWDDdmh6TViS./hUyyPfJMC"], ["name", "Gerry Mathe"], ["brief", "Happy to be the seocnd user of this website"], ["role", "User"], ["created_at", "2015-05-29 11:28:49.165104"], ["updated_at", "2015-05-29 11:28:49.165104"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "level_plays" ("level_id", "score", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["level_id", 1], ["score", "0"], ["user_id", 2], ["created_at", "2015-05-29 11:28:49.197882"], ["updated_at", "2015-05-29 11:28:49.197882"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'dani@dani.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mLevel Load (0.1ms)[0m  SELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Load (0.0ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Exists (0.1ms)[0m  SELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT  "levels".* FROM "levels" WHERE "levels"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTest Load (0.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "question_plays" ("user_id", "question_id", "answer_id", "level_play_id", "created_at", "updated_at", "score") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["question_id", 1], ["answer_id", 1], ["level_play_id", 1], ["created_at", "2015-05-29 11:28:49.246023"], ["updated_at", "2015-05-29 11:28:49.246023"], ["score", "0"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "question_plays" WHERE "question_plays"."level_play_id" = ?[0m  [["level_play_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 1]]
+  [1m[36mQuestionPlay Load (0.2ms)[0m  [1mSELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."level_play_id" = ?[0m  [["level_play_id", 1]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'gerry@gerry.com' AND "users"."id" != 2) LIMIT 1
+  [1m[36mTest Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tests" WHERE ("tests"."name" = 'JavaScript' AND "tests"."id" != 1) LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mLevelPlay Load (0.3ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays"  ORDER BY "level_plays"."id" DESC LIMIT 1[0m
+  [1m[35mQuestionPlay Load (0.2ms)[0m  SELECT  "question_plays".* FROM "question_plays"  ORDER BY "question_plays"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mLevelPlay Load (0.4ms)[0m  SELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."user_id" = ?  [["user_id", 2]]
+  [1m[36mLevel Load (0.3ms)[0m  [1mSELECT  "levels".* FROM "levels"  ORDER BY "levels"."id" ASC LIMIT 1[0m
+  [1m[35mLevelPlay Load (0.3ms)[0m  SELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."level_id" = ?  [["level_id", 1]]
