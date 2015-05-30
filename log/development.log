@@ -23529,3 +23529,300 @@ Processing by TestsController#show as JSON
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
   [1m[36mLevel Load (0.3ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
 Completed 200 OK in 104ms (Views: 84.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-30 11:13:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (29.2ms)
+  [1m[35mTest Load (28.2ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 1994ms (Views: 1909.3ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-30 11:13:21 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-30 11:13:21 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-30 11:13:21 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-30 11:13:21 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/views/level_plays/show.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/models/level_play.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/templates/level_plays/show.html" for ::1 at 2015-05-30 11:13:22 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-30 11:13:23 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-30 11:13:23 +0100
+
+
+Started GET "/tests.json" for ::1 at 2015-05-30 11:13:26 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (28.8ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (66.0ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+Completed 200 OK in 664ms (Views: 567.5ms | ActiveRecord: 95.5ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-05-30 11:13:31 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.3ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+Completed 200 OK in 103ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-30 11:13:31 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mLevelPlay Load (12.7ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered level_plays/show.json.jbuilder (74.2ms)
+Completed 200 OK in 191ms (Views: 146.9ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/tests/2" for ::1 at 2015-05-30 11:13:36 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 2]]
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/level_plays/2" for ::1 at 2015-05-30 11:13:36 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mLevelPlay Load (0.2ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered level_plays/show.json.jbuilder (0.6ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-05-30 11:13:40 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-30 11:13:40 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mLevelPlay Load (0.2ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered level_plays/show.json.jbuilder (0.5ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-30 11:13:43 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mLevelPlay Load (3.1ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered level_plays/show.json.jbuilder (0.7ms)
+Completed 200 OK in 85ms (Views: 80.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/tests/2" for ::1 at 2015-05-30 11:14:10 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mTest Load (16.5ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+Completed 200 OK in 41ms (Views: 8.9ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/level_plays/2" for ::1 at 2015-05-30 11:14:10 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mLevelPlay Load (0.2ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered level_plays/show.json.jbuilder (0.7ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/level_plays/2" for ::1 at 2015-05-30 11:14:13 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mLevelPlay Load (0.2ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered level_plays/show.json.jbuilder (0.5ms)
+Completed 200 OK in 89ms (Views: 82.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/level_plays/2.json" for ::1 at 2015-05-30 11:28:28 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mLevelPlay Load (30.0ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered level_plays/show.json.jbuilder (37.1ms)
+Completed 200 OK in 133ms (Views: 100.7ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/tests/2.json" for ::1 at 2015-05-30 11:28:37 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTest Load (0.1ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 2]]
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/level-plays/2.json" for ::1 at 2015-05-30 11:28:53 +0100
+
+ActionController::RoutingError (No route matches [GET] "/level-plays/2.json"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (103.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (500.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (156.1ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (395.8ms)
+
+
+Started GET "/level-plays/1.json" for ::1 at 2015-05-30 11:29:04 +0100
+
+ActionController::RoutingError (No route matches [GET] "/level-plays/1.json"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.2ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (236.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (127.0ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (287.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-30 11:29:26 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+Completed 200 OK in 1180ms (Views: 1178.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-30 11:29:28 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/views/level_plays/show.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/models/level_play.js" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-30 11:29:29 +0100
+
+
+Started GET "/assets/templates/level_plays/show.html" for ::1 at 2015-05-30 11:29:29 +0100

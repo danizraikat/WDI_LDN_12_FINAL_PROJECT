@@ -1,6 +1,7 @@
 class Question < ActiveRecord::Base
   belongs_to :test
   belongs_to :level
+  belongs_to :level_play
   has_many :answers
   has_many :question_plays
   validates_associated :test, :level

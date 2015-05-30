@@ -5,11 +5,13 @@ class LevelPlaysController < ApplicationController
   # GET /level_plays.json
   def index
     @level_plays = LevelPlay.all
+    render json: @level_plays, root: false 
   end
 
   # GET /level_plays/1
   # GET /level_plays/1.json
   def show
+    render json: @level_plays, root: false 
   end
 
   # GET /level_plays/new
@@ -28,10 +30,8 @@ class LevelPlaysController < ApplicationController
 
     respond_to do |format|
       if @level_play.save
-        format.html { redirect_to @level_play, notice: 'Level play was successfully created.' }
         format.json { render :show, status: :created, location: @level_play }
       else
-        format.html { render :new }
         format.json { render json: @level_play.errors, status: :unprocessable_entity }
       end
     end
@@ -42,10 +42,8 @@ class LevelPlaysController < ApplicationController
   def update
     respond_to do |format|
       if @level_play.update(level_play_params)
-        format.html { redirect_to @level_play, notice: 'Level play was successfully updated.' }
         format.json { render :show, status: :ok, location: @level_play }
       else
-        format.html { render :edit }
         format.json { render json: @level_play.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +54,6 @@ class LevelPlaysController < ApplicationController
   def destroy
     @level_play.destroy
     respond_to do |format|
-      format.html { redirect_to level_plays_url, notice: 'Level play was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
