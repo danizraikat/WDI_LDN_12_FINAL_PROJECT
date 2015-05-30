@@ -30,9 +30,9 @@ class LevelPlaysController < ApplicationController
 
     respond_to do |format|
       if @level_play.save
-        format.json { render :show, status: :created, location: @level_play }
+        format.json { render json: @level_play, root: false, status: :created, location: @level_play }
       else
-        format.json { render json: @level_play.errors, status: :unprocessable_entity }
+        format.json { render json: @level_play.errors, root: false,  status: :unprocessable_entity }
       end
     end
   end
@@ -42,9 +42,9 @@ class LevelPlaysController < ApplicationController
   def update
     respond_to do |format|
       if @level_play.update(level_play_params)
-        format.json { render :show, status: :ok, location: @level_play }
+        format.json { render json: @level_play, root: false, status: :ok, location: @level_play }
       else
-        format.json { render json: @level_play.errors, status: :unprocessable_entity }
+        format.json { render json: @level_play.errors, root: false, status: :unprocessable_entity }
       end
     end
   end

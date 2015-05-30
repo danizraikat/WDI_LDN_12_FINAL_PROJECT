@@ -3,13 +3,14 @@ define([
   'backbone'
 ], function(_, Backbone){
   return Backbone.Model.extend({
-    urlRoot: "/level_plays",
+    urlRoot: "/questions",
     defaults: {
-      user_id: "",
+      test_id: "",
       level_id: "",
-      score: "",
-      questions: [],
-      answers: []       
+      level_play_id: "",
+      title: "",
+      content: "",
+      answers: []
     }
   });
 });

@@ -22,14 +22,12 @@ define([
           self.level_play.set({level_id: TestData.get("levels")[0].id})
           
           self.level_play.fetch({
-            success: function(LevelPlayData) {
+            success: function(LevelPlayData){
               self.render(TestData, LevelPlayData);
             }
           })
         }
-      });
-
-      
+      });     
     },
     render: function(test, level_play) {
 
