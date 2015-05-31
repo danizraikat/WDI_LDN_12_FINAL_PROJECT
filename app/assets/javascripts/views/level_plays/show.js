@@ -21,8 +21,8 @@ define([
 
       this.level_play.fetch({
         success: function(LevelPlayData) {
-          self.question.set({level_play_id:
-            LevelPlayData.get("level_plays")[0].id}),
+          self.question.set({level_id:
+            LevelPlayData.get("questions")[0].id}),
           self.question.fetch({
             success: function(QuestionData){
               self.render(LevelPlayData, QuestionData)}

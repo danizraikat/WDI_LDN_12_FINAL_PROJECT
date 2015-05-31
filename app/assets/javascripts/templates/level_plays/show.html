@@ -13,16 +13,12 @@
           </tr>
           <tr>
             <% _.each(question.get("answers"), function(answer){ %>
-              <tr>
-                <td class="answer"><%=answer.title %></td>
-                <td class="answer"><%=answer.content %></td>
-              </tr>
+              <td class="answer"><%=answer.title %></td>
+              <td class="answer"><%=answer.content %></td>              
             <% }); %>
           </tr>               
           <tr>
-            <td class="submit">
-              <button class="submit-button">SUBMIT</button>
-            </td>
+            <td class="submit">SUBMIT</td>
           </tr>
         <% }); %>
       </tbody>
