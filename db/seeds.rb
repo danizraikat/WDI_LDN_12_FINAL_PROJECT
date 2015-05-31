@@ -11,6 +11,7 @@ test2 = Test.create!(image:"http://www.javatpoint.com/images/javascript/javascri
 # Create a level for test1.
 level1 = test1.levels.create!(title: "Level 1", brief: "Have you heard of JS?")
 level2 = test2.levels.create!(title: "Level 2", brief: "Have you heard of Ruby?")
+level3 = test1.levels.create!(title: "Level 3", brief: "Welcome to JS?")
 
 # Now we need to create a question for that level.
 question1 = level1.questions.create!(test_id: 1, title: "Question 1", content: "What is JavaScript?")
@@ -32,6 +33,7 @@ user1 = User.create!(email: "gerry@gerry.com", password: "password", name: "Gerr
 #   (level.questions.count)
 level_play1 = user1.level_plays.create!(level_id: 1, score: "0")
 level_play2 = user1.level_plays.create!(level_id: 2, score: "0")
+level_play3 = user1.level_plays.create!(level_id: 3, score: "0")
 
 # User needs to play a question in that level
 question_play1 = level_play1.question_plays.create!(user_id: 1, question_id: 1, answer_id: 1)

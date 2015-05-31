@@ -26472,3 +26472,307 @@ Processing by LevelPlaysController#show as JSON
   Parameters: {"id"=>"1"}
   [1m[35mLevelPlay Load (0.2ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 09:57:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (20.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (40.4ms)
+  [1m[35mTest Load (27.4ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 1352ms (Views: 1275.0ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-31 09:57:16 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-31 09:57:17 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-31 09:57:17 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-31 09:57:17 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-31 09:57:17 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/views/level_plays/show.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/models/level_play.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/models/answer.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/models/question.js" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/templates/level_plays/show.html" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-31 09:57:18 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-31 09:57:19 +0100
+
+
+Started GET "/tests/1" for ::1 at 2015-05-31 09:57:20 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTest Load (0.4ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLevel Load (17.5ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?[0m  [["level_id", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 1]]
+Completed 200 OK in 796ms (Views: 468.8ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-31 09:57:21 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mLevelPlay Load (0.2ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 117ms (Views: 53.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tests/2" for ::1 at 2015-05-31 09:57:22 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mTest Load (0.3ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/level_plays/2" for ::1 at 2015-05-31 09:57:22 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mLevelPlay Load (0.2ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-05-31 09:57:23 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTest Load (13.6ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?[0m  [["level_id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 1]]
+Completed 200 OK in 21ms (Views: 5.5ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-31 09:57:23 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mLevelPlay Load (0.3ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/2" for ::1 at 2015-05-31 09:57:24 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLevel Load (0.1ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 2]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/level_plays/2" for ::1 at 2015-05-31 09:57:24 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mLevelPlay Load (0.2ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/level_plays/2" for ::1 at 2015-05-31 09:57:26 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mLevelPlay Load (0.3ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 17ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-31 09:57:50 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (29.5ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 170ms (Views: 139.5ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-31 09:57:50 +0100
+
+
+Started GET "/assets/levels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-31 09:57:50 +0100
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-31 09:57:50 +0100
+
+
+Started GET "/assets/tests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-31 09:57:50 +0100
+
+
+Started GET "/assets/question_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/scaffolds.self-b8183323fcb27f5e7bb2bcfa7d8ac1ce954a636f26b2b7603bee6512dde33afc.css?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/level_plays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/foundation_and_overrides.self-5df359d3942a9a496186763b0a65e5263c4e57ee1b4e6ac6957eaff79323b52a.css?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/views/level_plays/show.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-05-31 09:57:51 +0100
+
+
+Started GET "/assets/models/level_play.js" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/models/question.js" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/models/answer.js" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/templates/level_plays/show.html" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-05-31 09:57:52 +0100
+
+
+Started GET "/level_plays/2" for ::1 at 2015-05-31 09:57:52 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mLevelPlay Load (0.2ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/2" for ::1 at 2015-05-31 09:57:52 +0100
+Processing by QuestionsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/answers/2" for ::1 at 2015-05-31 09:57:52 +0100
+Processing by AnswersController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 19ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-05-31 10:02:45 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (34.1ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.2ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+Completed 200 OK in 42ms (Views: 5.4ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-31 10:02:46 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mLevelPlay Load (0.2ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-31 10:02:51 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mLevelPlay Load (0.2ms)[0m  [1mSELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 20ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/1" for ::1 at 2015-05-31 10:02:51 +0100
+Processing by QuestionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/answers/1" for ::1 at 2015-05-31 10:02:51 +0100
+Processing by AnswersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-05-31 10:02:54 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mTest Load (0.2ms)[0m  SELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLevel Load (0.5ms)[0m  [1mSELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?[0m  [["test_id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+Completed 200 OK in 20ms (Views: 10.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/level_plays/1" for ::1 at 2015-05-31 10:02:54 +0100
+Processing by LevelPlaysController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mLevelPlay Load (0.2ms)[0m  SELECT  "level_plays".* FROM "level_plays" WHERE "level_plays"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 26ms (Views: 3.4ms | ActiveRecord: 0.2ms)
