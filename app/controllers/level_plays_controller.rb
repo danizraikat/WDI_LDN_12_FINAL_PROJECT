@@ -26,7 +26,7 @@ class LevelPlaysController < ApplicationController
   # POST /level_plays
   # POST /level_plays.json
   def create
-    @level_play = LevelPlay.new(level_play_params)
+    @level_play = current_user.level_plays.new(level_play_params)
 
     respond_to do |format|
       if @level_play.save

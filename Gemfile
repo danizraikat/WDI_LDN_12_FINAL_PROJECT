@@ -5,6 +5,8 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'foundation-rails'
 gem 'active_model_serializers'
+gem 'omniauth', '1.2.2'
+gem 'omniauth-facebook', '2.0.1' 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
