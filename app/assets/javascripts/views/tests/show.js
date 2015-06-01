@@ -49,7 +49,11 @@ define([
       event.preventDefault();
       $.ajax({
         type: "POST",
-        url: "/level_plays"
+        url: "/level_plays",
+        data: {level_play:{
+          test_id: this.test.get("id"),
+          
+        }}
       }).done(function(data){
         debugger
         console.log("hello");
