@@ -47,16 +47,19 @@ define([
 
     createLevelPlay: function(event) {
       event.preventDefault();
+      var level_id = $(event.currentTarget).data("id");
       $.ajax({
         type: "POST",
         url: "/level_plays",
-        data: {level_play:{
-          test_id: this.test.get("id"),
-          
-        }}
+        data: {
+          level_play: {
+            level_id: level_id,
+            test_id: this.test.get("id"),
+          }
+        }
       }).done(function(data){
-        debugger
-        console.log("hello");
+        Backbone.history.navigate('level_plays/'+level_id, true);
+        console.log(data);
       });
     }
 
