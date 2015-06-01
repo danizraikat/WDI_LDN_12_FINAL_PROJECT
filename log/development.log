@@ -28551,3 +28551,236 @@ NoMethodError (undefined method `questions' for #<QuestionPlay:0x007f932228dd38>
   Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
   Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
   Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (394.4ms)
+
+
+Started GET "/" for ::1 at 2015-06-01 09:38:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (10.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (29.4ms)
+  [1m[35mTest Load (12.4ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 1056ms (Views: 1005.6ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/views/level_plays/show.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/models/level_play.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/models/question.js" for ::1 at 2015-06-01 09:38:49 +0100
+
+
+Started GET "/assets/models/answer.js" for ::1 at 2015-06-01 09:38:50 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-06-01 09:38:50 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-06-01 09:38:50 +0100
+
+
+Started GET "/assets/templates/level_plays/show.html" for ::1 at 2015-06-01 09:38:50 +0100
+
+
+Started GET "/tests.json" for ::1 at 2015-06-01 09:39:07 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (26.9ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevelPlay Load (0.6ms)[0m  [1mSELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."level_id" = ?[0m  [["level_id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 1]]
+  [1m[36mAnswer Load (16.9ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  [1m[35mQuestionPlay Load (0.7ms)[0m  SELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."level_play_id" = ?  [["level_play_id", 1]]
+Completed 500 Internal Server Error in 663ms (ActiveRecord: 47.9ms)
+
+NoMethodError (undefined method `questions' for #<QuestionPlay:0x007fa251cff148>):
+  app/controllers/tests_controller.rb:6:in `index'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (213.1ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (174.1ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (451.1ms)
+
+
+Started GET "/tests/1" for ::1 at 2015-06-01 09:39:30 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevelPlay Load (0.1ms)[0m  [1mSELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."level_id" = ?[0m  [["level_id", 1]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  [1m[35mQuestionPlay Load (0.1ms)[0m  SELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."level_play_id" = ?  [["level_play_id", 1]]
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `questions' for #<QuestionPlay:0x007fa2573654b0>):
+  app/controllers/tests_controller.rb:10:in `show'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.1ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (131.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (113.0ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (251.8ms)
+
+
+Started GET "/tests/2" for ::1 at 2015-06-01 09:39:33 +0100
+Processing by TestsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTest Load (0.2ms)[0m  [1mSELECT  "tests".* FROM "tests" WHERE "tests"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 2]]
+  [1m[36mLevelPlay Load (0.8ms)[0m  [1mSELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."level_id" = ?[0m  [["level_id", 2]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+  [1m[35mQuestionPlay Load (0.1ms)[0m  SELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."level_play_id" = ?  [["level_play_id", 2]]
+  [1m[36mQuestion Load (1.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."level_play_id" = ?[0m  [[nil, 2]]
+SQLite3::SQLException: no such column: questions.level_play_id: SELECT "questions".* FROM "questions" WHERE "questions"."level_play_id" = ?
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.1ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: questions.level_play_id: SELECT "questions".* FROM "questions" WHERE "questions"."level_play_id" = ?):
+  app/controllers/tests_controller.rb:10:in `show'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (156.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (139.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (306.9ms)
+
+
+Started GET "/" for ::1 at 2015-06-01 09:40:14 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mTest Load (0.2ms)[0m  SELECT "tests".* FROM "tests"
+Completed 200 OK in 152ms (Views: 141.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/views/tests/index.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/views/level_plays/show.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/views/tests/show.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/models/question.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/models/level_play.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/models/test.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/collections/tests.js" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/templates/tests/show.html" for ::1 at 2015-06-01 09:40:14 +0100
+
+
+Started GET "/assets/templates/tests/index.html" for ::1 at 2015-06-01 09:40:15 +0100
+
+
+Started GET "/assets/templates/level_plays/show.html" for ::1 at 2015-06-01 09:40:15 +0100
+
+
+Started GET "/assets/models/answer.js" for ::1 at 2015-06-01 09:40:15 +0100
+
+
+Started GET "/tests.json" for ::1 at 2015-06-01 09:40:17 +0100
+Processing by TestsController#index as JSON
+  [1m[36mTest Load (0.3ms)[0m  [1mSELECT "tests".* FROM "tests"[0m
+  [1m[35mLevel Load (0.2ms)[0m  SELECT "levels".* FROM "levels" WHERE "levels"."test_id" = ?  [["test_id", 1]]
+  [1m[36mLevelPlay Load (0.1ms)[0m  [1mSELECT "level_plays".* FROM "level_plays" WHERE "level_plays"."level_id" = ?[0m  [["level_id", 1]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."level_id" = ?  [["level_id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  [1m[35mQuestionPlay Load (0.1ms)[0m  SELECT "question_plays".* FROM "question_plays" WHERE "question_plays"."level_play_id" = ?  [["level_play_id", 1]]
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `questions' for #<QuestionPlay:0x007fa257f02fe8>):
+  app/controllers/tests_controller.rb:6:in `index'
+
+
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (136.4ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (123.5ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/danial-zraykat/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (272.9ms)
