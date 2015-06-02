@@ -1,0 +1,32 @@
+{:uriI"Úfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=8cdc532d12ce0bf427e589760ba2c1c26bded9afcfb1d7bff78ecdacc1c1ffbd:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"€/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"X<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+
+    <table>
+      <tbody>
+        <% _.each(level.get("questions"), function(question){ %><!-- !!!!!!!!!!!!???????????????????????????????????????!!!!!!!!!??????? -->
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <tr>
+            <% _.each(question.get("answers"), function(answer){ %>
+              <td class="answer"><%=answer.title %></td>
+              <td class="answer"><%=answer.content %></td>              
+            <% }); %>
+          </tr>               
+          <tr>
+            <td class="submit">SUBMIT</td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Žfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%*yá[ñÃš:7´ŠÆPU G3jž.ƒ¶E—¥¨­RFm:lengthiX:integrityI"9sha-256-KnnhW/HDmjo3tIrGUBxVIEczap4ug7ZFl6WorVJGbQc=;T:dependencies_digest"%|mg©E'zeé†òêoÎy5ã1Ùº\Õ)9&)ñ:idI"E8cdc532d12ce0bf427e589760ba2c1c26bded9afcfb1d7bff78ecdacc1c1ffbd;F:
+mtimel+þumU

@@ -1,0 +1,32 @@
+{:uriI"⁄file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=ef35ed76be5b63bac37497f72c5a080c6cb35ac1f34a87d3696f09b7271d2b6a:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"Ä/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"V<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+
+    <table>
+      <tbody>
+        <% _.each(level_play.get("questions"), function(question){ %><!-- !!!!!!!!!!!!???????????????????????????????????????!!!!!!!!!??????? -->
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <tr>
+            <% _.each(question.answers, function(answer){ %>
+              <td class="answer"><%=answer.title %></td>
+              <td class="answer"><%=answer.content %></td>              
+            <% }); %>
+          </tr>               
+          <tr>
+            <td class="submit">SUBMIT</td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"éfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%øùódåÀ÷5ûïõL˘Wy^Ö3réç^-Hdt?:lengthiV:integrityI"9sha-256-v51/l2SMy9Y1ngSVm0z5V3lehTMSco4FjV4tSGR0FT8=;T:dependencies_digest"%ÄbòMÔò/Ÿ7˝◊€)º•öNÍ«e∑ß+[¶Òå:idI"Eef35ed76be5b63bac37497f72c5a080c6cb35ac1f34a87d3696f09b7271d2b6a;F:
+mtimel+™mU

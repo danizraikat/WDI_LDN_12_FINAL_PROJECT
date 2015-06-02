@@ -3,9 +3,10 @@ class QuestionPlay < ActiveRecord::Base
   belongs_to :question
   belongs_to :answer
   belongs_to :level_play
-  validates_associated :user, :question, :answer, :level_play
+  
+  # validates_associated :user, :question, :answer, :level_play
   # validates :score, numericality: { only_integer: true }
-  validates :user_id, :question_id, :answer_id, :level_play_id, presence: true 
+  # validates :user_id, :question_id, :answer_id, :level_play_id, presence: true 
 
   #before_create = before saved in db
   before_create :update_correctness 
@@ -21,7 +22,7 @@ class QuestionPlay < ActiveRecord::Base
 
   def update_level_score
     if complete?
-      self.level_play.score == number_of_correct_answers
+      self.level_play.score = number_of_correct_answers
       self.level_play.save
     end 
   end

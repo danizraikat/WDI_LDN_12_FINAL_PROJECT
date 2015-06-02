@@ -1,0 +1,35 @@
+{:uriI"⁄file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=1fb2573682837689a4e60c4e93923dfae9512a17f9d44927c48cd96ab05fa503:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"Ä/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"
+<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+
+    <table>
+      <tbody>
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <tr>
+            <% _.each(question.answers, function(answer){ %>
+              <td class="answer"><%=answer.title %></td>
+              <td class="answer"><%=answer.content %></td>              
+            <% }); %>
+          </tr>               
+          <tr>
+            <td class="submit">SUBMIT</td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"éfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%ö©4Ç[∂y?Í§îœ∞ÁöL¥1ç·˙7§ã⁄ç„<:lengthi
+:integrityI"9sha-256-mqk0glu2eT/qpJTPsOeaTLQxjeH6DDekDYsM2hSN4zw=;T:dependencies_digest"%4ı%òòO˝i-y)Í_˘4≤é«|ˆ_7¿Õ
+‰µ!x+:idI"E1fb2573682837689a4e60c4e93923dfae9512a17f9d44927c48cd96ab05fa503;F:
+mtimel+Õ´mU

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601125540) do
+ActiveRecord::Schema.define(version: 20150602151332) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "question_id"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20150601125540) do
   create_table "level_plays", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "level_id"
-    t.string   "max_score"
-    t.string   "score"
+    t.integer  "max_score"
+    t.integer  "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150601125540) do
     t.integer  "question_id"
     t.integer  "answer_id"
     t.integer  "level_play_id"
-    t.string   "score"
+    t.integer  "score"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

@@ -1,29 +1,25 @@
 <main>
   <div class="m-index">
     <h1 class="h1-m-index">NO CHEATING</h1>
-
-    <table>
-      <tbody>
-        <% _.each(level_play.get("questions"), function(question){ %>
-          <tr>
-            <td class="question"><%= question.title %></td>        
-          </tr>
-          <tr>
-            <td class="question"><%= question.content %></td>        
-          </tr>
-          <tr>
-            <% _.each(question.get("answers"), function(answer){ %>
-              <td class="answer"><%=answer.title %></td>
-              <td class="answer"><%=answer.content %></td>              
-            <% }); %>
-          </tr>               
-          <tr>
-            <td class="submit">SUBMIT</td>
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
-  
+    <h2>Score: <%= level_play.get("score") %></h2>
+    <ul>
+      <% _.each(level_play.get("questions"), function(question){ %>
+        <li><h3><%= question.title %></h3></li>
+        <li><p><%= question.content %></p></li>        
+        <li>
+          <ul>
+            <form>
+              <% _.each(question.answers, function(answer){ %>
+                <li><input type="radio" name="answer" data-level_play="<%= level_play.get("id") %>" data-question="<%= question.id %>" data-question-id="<%= question.id %>" value="<%=answer.id %>"><%=answer.content %></li>  
+              <% }); %>
+            </form>
+          </ul>
+        </li>               
+        <li>
+          <a href="#" data-question-id="<%= question.id %>" class="submit button">SUBMIT</a>
+        </li>
+      <% }); %>
+    </ul>
   </div>
   <br/>
 </main>

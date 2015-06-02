@@ -1,0 +1,28 @@
+{:uriI"Úfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=45b4225875d05fd7c8815fce1a834faf15fd94c4f804943fd9e3b979fb14b9d4:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"€/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"9<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+    <h2>Score: <%= level_play.get("score") %></h2>
+    <ul>
+      <% _.each(level_play.get("questions"), function(question){ %>
+        <li><h3><%= question.title %></h3></li>
+        <li><p><%= question.content %></p></li>        
+        <li>
+          <ul>
+            <form>
+              <% _.each(question.answers, function(answer){ %>
+                <li><input type="radio" name="answer" data-level_play="<%= level_play.get("id") %>" data-question="<%= question.id %>" value="<%=answer.id %>"><%=answer.content %></li>  
+              <% }); %>
+            </form>
+          </ul>
+        </li>               
+        <li>
+          <a href="#" class="submit button">SUBMIT</a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Žfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%óÓBõÀÙ½îl}VÁÀrþãÁªÕ`[²ÅÙŸÚf¾:lengthi9:integrityI"9sha-256-89NCAvXA2Qi97mx9VhDBEMBy/uPBqtVgW7LF2Z/aZr4=;T:dependencies_digest"%%•í0øN³üYÑvY±´×^{]	[¥òÕ6UM0=±Í:idI"E45b4225875d05fd7c8815fce1a834faf15fd94c4f804943fd9e3b979fb14b9d4;F:
+mtimel+æµmU

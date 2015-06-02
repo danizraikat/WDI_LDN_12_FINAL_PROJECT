@@ -17,7 +17,8 @@ define([
       this.level_play = new LevelPlay({id: id});
       this.test.fetch({
         success: function(TestData) {
-          self.level_play.set({level_id: TestData.get("levels")[0].id}) 
+          self.level_play.set({level_id: 
+            TestData.get("levels")[0].id}) 
           self.level_play.fetch({
             success: function(LevelPlayData){
               self.render(TestData, LevelPlayData);
@@ -29,6 +30,7 @@ define([
     render: function(test, level_play) {
       var template = _.template(TestTemplate);
       this.$el.html(template({ test: test, level_play: level_play }));
+      return this;
     },
 
     events: {
@@ -58,8 +60,7 @@ define([
           }
         }
       }).done(function(data){
-        Backbone.history.navigate('level_plays/'+level_id, true);
-        console.log(data);
+        Backbone.history.navigate('level_plays/'+data.id, true);
       });
     }
 

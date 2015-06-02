@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
-    render json: @questions, root: false 
+    render json: @question, root: false 
   end
 
   # GET /questions/new

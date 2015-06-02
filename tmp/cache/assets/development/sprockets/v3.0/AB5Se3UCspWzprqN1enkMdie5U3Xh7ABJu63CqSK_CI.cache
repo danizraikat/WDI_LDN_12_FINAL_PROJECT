@@ -1,0 +1,33 @@
+{:uriI"⁄file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=95f1619d22becf349f77bf4009b290d0952c7e96e6d656304b9d6cb2bd26863e:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"Ä/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+
+    <table>
+      <tbody>
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <tr>
+            <td class="question"><%= question.title %></td>        
+          </tr>
+          <tr>
+            <td class="question"><%= question.content %></td>        
+          </tr>
+          <tr>
+            <% _.each(question.answers, function(answer){ %>
+              <td class="answer"><%=answer.title %></td>
+              <td class="answer"><%=answer.content %></td>              
+            <% }); %>
+          </tr>               
+          <tr>
+            <td class="submit btn">SUBMIT</td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"éfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%–’¿≤òÈç–◊£œçqV.o"‰\¨Z˘6ˇ°Cß%:lengthi:integrityI"9sha-256-0NXAGbKY6Y3QBNejzwyNcVYDLm8i5FysWvk2/6FDpyU=;T:dependencies_digest"%≤ÏΩø—yΩ €ƒ+ÒÎíS
+«ÇœÔ·∫¥Ú™¡Úﬁ:idI"E95f1619d22becf349f77bf4009b290d0952c7e96e6d656304b9d6cb2bd26863e;F:
+mtimel+"≠mU

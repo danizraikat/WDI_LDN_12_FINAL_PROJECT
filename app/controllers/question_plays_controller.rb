@@ -1,4 +1,4 @@
-class QuestionPlaysController < ApplicationController
+  class QuestionPlaysController < ApplicationController
   before_action :set_question_play, only: [:show, :edit, :update, :destroy]
 
   # GET /question_plays
@@ -24,17 +24,20 @@ class QuestionPlaysController < ApplicationController
   # POST /question_plays
   # POST /question_plays.json
   def create
-    @question_play = QuestionPlay.new(question_play_params)
+    @question_play = current_user.question_plays.new(question_play_params)
+    if @question_play.save
+      render json: {}   
+    end 
 
-    respond_to do |format|
-      if @question_play.save
-        format.html { redirect_to @question_play, notice: 'Question play was successfully created.' }
-        format.json { render :show, status: :created, location: @question_play }
-      else
-        format.html { render :new }
-        format.json { render json: @question_play.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @question_play.save
+    #     format.html { redirect_to @question_play, notice: 'Question play was successfully created.' }
+    #     format.json { render :show, status: :created, location: @question_play }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @question_play.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /question_plays/1

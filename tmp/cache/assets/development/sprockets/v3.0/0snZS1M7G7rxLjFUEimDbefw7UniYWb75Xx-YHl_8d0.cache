@@ -1,0 +1,27 @@
+{:uriI"Úfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=eb7478dc9d18de24969178ab51e56c15d8afa55b2cf846142e66df020f8722f8:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"€/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"Æ<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+    <ul>
+      <% _.each(level_play.get("questions"), function(question){ %>
+        <li><h3><%= question.title %></h3></li>
+        <li><p><%= question.content %></p></li>        
+        <li>
+          <ul>
+            <form action="">
+              <% _.each(question.answers, function(answer){ %>
+                <input type="radio" name="<%=answer.title %>" value="<%=answer.title %>"><%=answer.content %>   
+              <% }); %>
+            </form>
+          </ul>
+        </li>               
+        <li>
+          <a href="#" class="submit button">SUBMIT</a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Žfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%zàùa6U~ÐeMè¢ÃÇ|!ßf¥Ì·Û:úl%[®7:lengthiÆ:integrityI"9sha-256-euD5YTYPVX7QZU3oosPHfCHfZqXMt9s6C/psJRZbrjc=;T:dependencies_digest"%sx%î*rheÕ|þ‹¤ŽâW­:[2ãþ®î(:idI"Eeb7478dc9d18de24969178ab51e56c15d8afa55b2cf846142e66df020f8722f8;F:
+mtimel+Ä°mU

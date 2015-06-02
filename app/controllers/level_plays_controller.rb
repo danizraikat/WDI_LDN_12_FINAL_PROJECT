@@ -1,7 +1,7 @@
 class LevelPlaysController < ApplicationController
   before_action :set_level_play, only: [:show, :edit, :update, :destroy]
-
   before_action :authenticate_user!, only: [:create]
+
   # GET /level_plays
   # GET /level_plays.json
   def index
@@ -12,7 +12,7 @@ class LevelPlaysController < ApplicationController
   # GET /level_plays/1
   # GET /level_plays/1.json
   def show
-    render json: @level_plays, root: false 
+    render json: @level_play, root: false 
   end
 
   # GET /level_plays/new

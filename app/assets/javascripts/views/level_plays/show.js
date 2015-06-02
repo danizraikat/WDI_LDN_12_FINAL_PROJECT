@@ -21,8 +21,9 @@ define([
 
       this.level_play.fetch({
         success: function(LevelPlayData) {
-          self.question.set({level_id:
-            LevelPlayData.get("questions")[0].id}),
+          // self.question.set({level_id:
+          //   LevelPlayData.get("levels")[0].id}),      
+
           self.question.fetch({
             success: function(QuestionData){
               self.render(LevelPlayData, QuestionData)}
@@ -34,13 +35,19 @@ define([
         }
       })
     },
-    render: function(level_play, question, answer) {
+    
+    render: function(level, question, answer) {
       var template = _.template(LevelPlayTemplate);
-      this.$el.html(template({ level_play: level_play, question: question, answer: answer }));
+      this.$el.html(template({ 
+        level_play: this.level_play, 
+        question: this.question, 
+        answer: this.answer 
+      }));
     },
 
     events: {
-      "click .delete": "delete"
+      "click .delete": "delete",
+      "click .submit": "createQuestionPlay"
     },
                                           
     delete: function(ev){
@@ -50,6 +57,25 @@ define([
           Backbone.history.navigate('level_plays', true);
         }
       });
+    },
+
+    createQuestionPlay: function(ev){
+      ev.preventDefault();
+
+      var currentQuestionId = $(ev.currentTarget).data("question-id");
+      var selected = $("input[data-question-id="+currentQuestionId+"][type=radio]:checked")
+      
+      $.ajax({
+        type: "POST",
+        url: "/question_plays",
+        data: { question_play: { 
+          question_id: $(selected).data("question"), 
+          answer_id: $(selected).val(),
+          level_play_id: $(selected).data("level_play")
+        }}
+      }).done(function(data){
+        console.log(data);
+      })
     }
   });
 
