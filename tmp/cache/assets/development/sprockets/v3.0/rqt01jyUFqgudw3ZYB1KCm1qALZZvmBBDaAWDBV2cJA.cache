@@ -1,0 +1,20 @@
+{:uriI"’file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/index.html?type=text/html&id=4717ce67857952babf199fb6c0de524446a0528519f49b6312f2ac01179cc92b:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"{/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/index.html;T:	nameI"templates/tests/index;T:logical_pathI"templates/tests/index.html;T:content_typeI"text/html;T:sourceI"€<main>
+  <div class="t-index">
+    <h1 class="h1-t-index">Tests</h1>
+
+      <ul>
+        <% _.each(tests, function(test){ %>
+          <li class="test-image"><%= test.get("image") %></li>                  
+          <h2 class="test-name"><%= test.get("name") %></h2>                  
+          <h3 class="test-brief"><%= test.get("brief") %></h3>        
+        <% }); %>
+      </ul>
+
+  </div> 
+  <br/>
+
+  <p class="new-index"><a href="#tests/new"> New Test</a></p>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"âfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/index.html;TT:charsetI"
+utf-8;F:digest"%√c’o4zÉ∑≈¸ÍõDØõ8©´$í⁄\ÎñBˇÑ“ˆ:lengthi€:integrityI"9sha-256-w2PVbzR6HYO3xfwD6ptEr5s4qaskkn/aXOuWQv+E0vY=;T:dependencies_digest"%¨≤BîÖ∆°÷Ùçπ7u6Ê÷=ô[êÒ$&7NÊú3÷[:idI"E4717ce67857952babf199fb6c0de524446a0528519f49b6312f2ac01179cc92b;F:
+mtimel+ÓΩnU

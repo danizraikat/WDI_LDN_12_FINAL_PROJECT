@@ -1,0 +1,25 @@
+{:uriI"’file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/index.html?type=text/html&id=3cef3b09d585b30b63c1ea4021e80925a85f558bbe0811ece18a2c74054e10ed:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"{/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/index.html;T:	nameI"templates/tests/index;T:logical_pathI"templates/tests/index.html;T:content_typeI"text/html;T:sourceI"a<main>
+  <div class="t-index">
+    
+    <div class="h1-t-index">
+      <h1 class="h1-t-index">Tests</h1>
+    </div>
+    
+    <div class="ul-t-index">
+      <ul>
+        <% _.each(tests, function(test){ %>
+          <li class="test-image"><%= test.get("image") %></li>                  
+          <h2 class="test-name"><a href="/#/tests/<%=test.get("id")%>"><%= test.get("name") %></a></h2>                  
+          <h3 class="test-brief"><%= test.get("brief") %></h3>        
+        <% }); %>
+      </ul>
+    </div>
+
+  </div> 
+  <br/>
+
+  <p class="new-index"><a href="#tests/new"> New Test</a></p>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"âfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/index.html;TT:charsetI"
+utf-8;F:digest"%ñw[¡Ö.+I“£„Í´ÃL}s‚Ö\ïÜ9¨Vî'ı)‰:lengthia:integrityI"9sha-256-lndbwYUuK0nSo+Pqq8xMfXMZ4oVclYY5GqxWlCf1KeQ=;T:dependencies_digest"%Úß+´í∞ U™‡úÅZD¶ôyLW?J/`Gå†ÿ‡:idI"E3cef3b09d585b30b63c1ea4021e80925a85f558bbe0811ece18a2c74054e10ed;F:
+mtimel+¡nU

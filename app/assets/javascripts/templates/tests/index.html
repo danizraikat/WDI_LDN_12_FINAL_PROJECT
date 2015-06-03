@@ -1,24 +1,26 @@
 <main>
   <div class="t-index">
-    <h1 class="h1-t-index">Listing Tests</h1>
-
-    <table>
-      <tbody>
+    
+    <div class="div-h1-t-index">
+      <h1 class="h1-t-index">Tests</h1>
+    </div>
+    
+    <div class="ul-t-index">
+      <ul>
         <% _.each(tests, function(test){ %>
-          <tr>
-            <td class="test-image"><%= test.get("image") %></td>        
-          </tr>
-          <tr>
-            <td class="test-name"><%= test.get("name") %></td>        
-          </tr>
-          <tr>
-            <td class="test-brief"><%= test.get("brief") %></td>        
-          </tr>
+          <button class="button-t-index">
+            <a href="/#/tests/<%=test.get("id")%>">
+              <!-- <li class="test-image"><%= test.get("image") %></li>                    -->
+              <h2 class="test-name"><%= test.get("name") %></h2>                  
+              <p class="test-brief"><%= test.get("brief") %></p>
+            </a>                   
+          </button>
         <% }); %>
-      </tbody>
-    </table>
+      </ul>
+    </div>
+
   </div> 
   <br/>
 
-  <p class="new-index"><a href="#tests/new"> New Test</a></p>
+  <!-- <p class="new-index"><a href="#tests/new"> New Test</a></p> -->
 </main>

@@ -1,18 +1,21 @@
 <main> 
   <div class="t-show">
-    <h1 class="h1-t-show"><%= test.get("name") %></h1>
+    <div class="div-h1-t-show">
+      <h1 class="h1-t-show"><%= test.get("name") %></h1>
+    </div>
 
-    <table>
-      <tbody>
+    <div class="table-t-show">
+      <ul>
         <% _.each(test.get("levels"), function(level){ %>
-          <tr>
-            <td class="level-title"><%= level.title %></td>
-            <td class="level-brief"><%= level.brief %></td>
-            <td><a class="play" data-id="<%= level.id %>" href="/#level_plays">Play</a></td>
-          </tr>
+          <button class="button-t-show">
+            <a class="play" data-id="<%= level.id %>" href="/#level_plays">
+              <h3 class="level-title"><%= level.title %></h3>
+              <p class="level-brief"><%= level.brief %></p>
+            </a>
+          </button>
         <% }); %>
-      </tbody>
-    </table>
+      </ul>
+    </div>
   </div> 
   <br/>
 

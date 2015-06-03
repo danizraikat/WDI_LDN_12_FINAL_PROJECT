@@ -1,3 +1,97 @@
 // Place all the styles related to the Tests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//--tests INDEX-- 
+
+.t-index {
+  padding-top: 3%;
+  padding-left: 7.5%;
+}
+
+.h1-t-index {
+  padding-top: 2.5%;
+  padding-left: 5%;
+  color: black;
+  font-family: Courier;
+}
+
+.button-t-index {
+  // padding: %;
+  margin: 5%;
+  width: 400px;
+  height: 350px;
+  background-color: white;
+  border-color: black;
+  border-width: 10px;
+}
+
+.button-t-index:hover {
+  background-color: grey; 
+}
+
+h2.test-name {
+  color: black;
+  font-family: Courier;
+}
+
+p.test-brief {
+  
+  font-family: Courier;
+}
+
+//--tests SHOW--
+.t-show {
+  padding-top: 5%;
+}
+
+.div-h1-t-show {
+  width: 100%;
+  padding-left: 5%;
+}
+
+.table-t-show {
+  padding-left: 5%;
+}
+
+.button-t-show {
+  margin: 5%;
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  border-color: black;
+  border-width: 10px;
+}
+
+h1.h1-t-show {
+  font-family: Courier;
+  padding-left: 5%;
+}
+
+.button-t-show:hover {
+  background-color: red; 
+}
+
+h3.level-title{
+  font-family: Courier;
+}
+
+p.level-brief{
+  font-family: Courier;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

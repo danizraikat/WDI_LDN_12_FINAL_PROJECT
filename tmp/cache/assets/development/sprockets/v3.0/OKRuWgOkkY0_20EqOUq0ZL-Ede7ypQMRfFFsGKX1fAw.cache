@@ -1,0 +1,27 @@
+{:uriI"⁄file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=c293ea306b3461633f78fd8a4f1119b5904ef3dd3676d4f77401aa47ae4f6983:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"Ä/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"]<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+    <h2>Score: <%= level_play.get("score") %></h2>
+
+    <ul>
+      <% _.each(level_play.get("questions"), function(question){ %>
+        <h3><%= question.title %></h3></li></td>
+        <p><%= question.content %></p>        
+        <ul>        
+          <form>
+            <% _.each(question.answers, function(answer){ %>
+              <input type="radio" name="answer" data-level_play="<%= level_play.get("id") %>" data-question="<%= question.id %>" data-question-id="<%= question.id %>" value="<%=answer.id %>"><%=answer.content %>
+            <% }); %>
+          </form>          
+        </ul>               
+        <li>
+          <a href="#" data-question-id="<%= question.id %>" class="submit button">SUBMIT</a>
+        </li>>
+      <% }); %>
+    </ul>
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"éfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%⁄Æ‹WÏ ∞ÔÆˆ{oÖÕ˜{UOU†J3Á}j…±˛ı:lengthi]:integrityI"9sha-256-2q7cV+zKsO+u9ntvhc33e1VPVaALSjPnH30Oasmx/vU=;T:dependencies_digest"%aµRÔZêÖí ë±i˙¸¯ﬂLÏ6√+ÖWáà7+:idI"Ec293ea306b3461633f78fd8a4f1119b5904ef3dd3676d4f77401aa47ae4f6983;F:
+mtimel+Ï—nU

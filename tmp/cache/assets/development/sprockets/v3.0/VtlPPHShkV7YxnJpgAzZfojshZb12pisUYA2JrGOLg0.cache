@@ -1,0 +1,39 @@
+{:uriI"Úfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=c7160564ebba2f985b8c437df0ba319f2971f4fbc5ea2bbdc042a76fab07335a:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"€/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"><main>
+  <div class="lp-show">
+    
+    <div class="heading-lp-show">
+      <h1 class="h1-lp-show">Game ON !</h1>
+      <h2 class="h2-lp-show">Score: <%= level_play.get("score") %></h2>
+    </div>
+
+    <div class="main-lp-show">
+      <ul class="ul-lp-show">
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <div class="div-lp-show-question"> 
+            <h3 class="h3-lp-show-qtitle"><%= question.title %></h3>
+            <h3 class="h3-lp-show-qcontent"><%= question.content %></h3>               
+            <p class="p-lp-answer">
+              <form class="rb-lp-show">
+                  <% _.each(question.answers, function(answer){ %>
+                    <input type="radio" name="answer" data-level_play="<%= level_play.get("id") %>" data-question="<%= question.id %>" data-question-id="<%= question.id %>" value="<%=answer.id %>">__<%=answer.content %>
+                  <% }); %>          
+              </form>                       
+            </p>
+            <button class="submit-button">
+              <a href="#" data-question-id="<%= question.id %>">
+                <h1>SUBMIT</h1>
+              </a>
+            </button>
+          </div>
+        <% }); %>
+      </ul>
+    </div>
+
+    <!-- <button><a class="play" href="/#level_plays/:id"> Score</a></button> -->
+
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Žfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%T¯šd_Ë×yELG¨ˆ¬ZÒ—/ì.œî{çûe(ïc:lengthi>:integrityI"9sha-256-VK+aZF/L1395RUxHqAKIrJ1a0pcv7C6c7nvn+2Uo72M=;T:dependencies_digest"%µy²M‘ºéàÂN1¦©I­j""ŠÚepºÒI:idI"Ec7160564ebba2f985b8c437df0ba319f2971f4fbc5ea2bbdc042a76fab07335a;F:
+mtimel+coU

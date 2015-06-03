@@ -1,3 +1,43 @@
 // Place all the styles related to the LevelPlays controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.lp-show {
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+h1.h1-lp-show, h2.h2-lp-show, h3.h3-lp-show-qtitle, h3.h3-lp-show-qcontent, form.rb-lp-show {
+  font-family: Courier;
+}
+
+.heading-lp-show{
+  padding-left: 5%;
+}
+
+.h2-lp-show {
+  color: grey;
+}
+
+div.div-lp-show-question {
+  background-color: #E6E6E6;
+  border-style: double;
+  border-color: black;
+  border-width: 5px;
+  margin-left: 10%;
+  margin-top: 5%;
+  padding: 5%;
+  width: 800px;
+} 
+
+.submit-button {
+  background-color: #E6E6E6;
+  border-color: black;
+  border-width: 2.5px;
+}
+
+.submit-button:hover {
+  background-color: white; 
+}
+
+

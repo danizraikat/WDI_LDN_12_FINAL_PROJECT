@@ -24,25 +24,30 @@ define([
           // self.question.set({level_id:
           //   LevelPlayData.get("levels")[0].id}),      
 
-          self.question.fetch({
-            success: function(QuestionData){
-              self.render(LevelPlayData, QuestionData)}
-            }),
-          self.answer.fetch({
-            success: function(AnswerData){
-              self.render(LevelPlayData, AnswerData)}
-          })
+          // self.question.fetch({
+          //   success: function(QuestionData){
+          //     self.render(LevelPlayData, QuestionData)}
+          //   }),
+          // self.answer.fetch({
+          //   success: function(AnswerData){
+          //     self.render(LevelPlayData, AnswerData)}
+          // })
+          self.render(LevelPlayData)
         }
       })
     },
     
     render: function(level, question, answer) {
       var template = _.template(LevelPlayTemplate);
+
+      this.undelegateEvents();
       this.$el.html(template({ 
         level_play: this.level_play, 
         question: this.question, 
         answer: this.answer 
       }));
+      this.delegateEvents();
+
     },
 
     events: {
@@ -60,7 +65,10 @@ define([
     },
 
     createQuestionPlay: function(ev){
+
       ev.preventDefault();
+
+
 
       var currentQuestionId = $(ev.currentTarget).data("question-id");
       var selected = $("input[data-question-id="+currentQuestionId+"][type=radio]:checked")
@@ -75,6 +83,7 @@ define([
         }}
       }).done(function(data){
         console.log(data);
+        $(ev.currentTarget).attr("disabled", "disabled")
       })
     }
   });

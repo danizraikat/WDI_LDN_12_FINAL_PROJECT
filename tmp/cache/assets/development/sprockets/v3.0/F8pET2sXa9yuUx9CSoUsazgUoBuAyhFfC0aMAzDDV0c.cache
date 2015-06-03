@@ -1,0 +1,33 @@
+{:uriI"⁄file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=fa570e75f59bc750c00d791517a86555fa5aa2a0655854b260dc6610b75ca673:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"Ä/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"l<main>
+  <div class="lp-show">
+    
+    <div class="heading-lp-show">
+      <h1 class="h1-lp-show">Play</h1>
+      <h2 class="h2-lp-show">Score: <%= level_play.get("score") %></h2>
+    </div>
+
+    <div class="main-lp-show">
+      <ul class="ul-lp-show">
+        <% _.each(level_play.get("questions"), function(question){ %>
+          <h3 class="h3-lp-show"><%= question.title %></h3></li></td>
+          <p class="p-lp-show"><%= question.content %></p>               
+          <form class="rb-lp-show">
+              <% _.each(question.answers, function(answer){ %>
+                <input type="radio" name="answer" data-level_play="<%= level_play.get("id") %>" data-question="<%= question.id %>" data-question-id="<%= question.id %>" value="<%=answer.id %>"><%=answer.content %>
+              <% }); %>          
+          </form>                       
+          <li>
+            <a href="#" data-question-id="<%= question.id %>" class="submit button">SUBMIT</a>
+          </li>>
+        <% }); %>
+      </ul>
+    </div>
+
+    <!-- <button><a class="play" href="/#level_plays/:id"> Score</a></button> -->
+
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"éfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%R˜UX(\ë8ºg5˝y6Z3yïƒÁh>8ÎEµ.X¢M:lengthil:integrityI"9sha-256-UvdVWChckTi8ZzX9eR02WjMZeZXE52g+OOtFtS5Yok0=;T:dependencies_digest"%B÷,èÉsàá´∂%9≈4^†ã¯r∆])éêv˚á:idI"Efa570e75f59bc750c00d791517a86555fa5aa2a0655854b260dc6610b75ca673;F:
+mtimel+‘÷nU

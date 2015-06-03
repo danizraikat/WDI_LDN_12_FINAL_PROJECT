@@ -1,0 +1,26 @@
+{:uriI"‘file:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html?type=text/html&id=a7ba6bf324f558ff975e6dc6d5e714f530026a8795ec1652c6f2b9e77c399286:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html;T:	nameI"templates/tests/show;T:logical_pathI"templates/tests/show.html;T:content_typeI"text/html;T:sourceI"à<main> 
+  <div class="t-show">
+    <div class="div-h1-t-show">
+      <h1 class="h1-t-show"><%= test.get("name") %></h1>
+    </div>
+
+    <div class="table-t-show">
+      <ul>
+        <% _.each(test.get("levels"), function(level){ %>
+          <button class="button-t-show">
+            <a class="play" data-id="<%= level.id %>" href="/#level_plays">
+              <li class="level-title"><%= level.title %></li>
+              <h3 class="level-brief"><%= level.brief %></h3>
+            </a>
+          </button>
+        <% }); %>
+      </ul>
+    </div>
+  </div> 
+  <br/>
+
+  <!-- <p class="new-index"><a href="#tests/new"> New Test</a></p> -->
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"àfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/tests/show.html;TT:charsetI"
+utf-8;F:digest"%*Xp)Òã˜}}:;nùOtS©x‹g!N©%±Ò;ÌLC:lengthià:integrityI"9sha-256-KlhwKfGL9319OjtunU90GFOpeNxnIU6pJbHxOwvtTEM=;T:dependencies_digest"%f,\5≥U£‡(°8⁄Mb{˚∑bœ†Û9íéVZ:idI"Ea7ba6bf324f558ff975e6dc6d5e714f530026a8795ec1652c6f2b9e77c399286;F:
+mtimel+PoU

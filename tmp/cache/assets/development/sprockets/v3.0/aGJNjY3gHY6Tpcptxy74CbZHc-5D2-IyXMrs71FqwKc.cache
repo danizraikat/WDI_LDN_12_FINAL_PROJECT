@@ -1,0 +1,35 @@
+{:uriI"Úfile:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html?type=text/html&id=da43674b920676a188bcd22e2b249f289d9192226750faa2ac48ce6eb4b70f22:ET:load_pathI"e/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts;F:filenameI"€/Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;T:	nameI"templates/level_plays/show;T:logical_pathI"$templates/level_plays/show.html;T:content_typeI"text/html;T:sourceI"ø<main>
+  <div class="m-index">
+    <h1 class="h1-m-index">NO CHEATING</h1>
+    <h2>Score: <%= level_play.get("score") %></h2>
+
+    <table>
+      <% _.each(level_play.get("questions"), function(question){ %>
+        <tr>
+          <td><h3><%= question.title %></h3></li></td>
+        </tr>
+        <tr>
+          <td><p><%= question.content %></p></td>        
+        </tr>
+        <tr>
+          <ul>
+            <td>
+              <form>
+                <% _.each(question.answers, function(answer){ %>
+                  <td><input type="radio" name="answer" data-level_play="<%= level_play.get("id") %>" data-question="<%= question.id %>" data-question-id="<%= question.id %>" value="<%=answer.id %>"><%=answer.content %></td>  
+                <% }); %>
+              </form>
+            </td>
+          </ul>
+        </tr>               
+        <tr>
+          <a href="#" data-question-id="<%= question.id %>" class="submit button">SUBMIT</a>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+  <br/>
+</main>;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"Žfile-digest:///Users/danial-zraykat/Documents/WDI_GA/WDI_LDN_12_RAILS_APP_FINAL_PROJECT/app/assets/javascripts/templates/level_plays/show.html;TT:charsetI"
+utf-8;F:digest"%jE`5îÞ„8ì,¹æAü®±[*E[_FœR2èw±ž:lengthiø:integrityI"9sha-256-akVgNe7ehDjsLAy55kH8rrFbKkVbX0acf1IPMuh3sZ4=;T:dependencies_digest"%ŽÞ§<ºÐðžJâ—k°e/í×x:$Ê@mžDþ“Ìqâ:idI"Eda43674b920676a188bcd22e2b249f289d9192226750faa2ac48ce6eb4b70f22;F:
+mtimel+ÑnU

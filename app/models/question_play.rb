@@ -9,10 +9,11 @@ class QuestionPlay < ActiveRecord::Base
   # validates :user_id, :question_id, :answer_id, :level_play_id, presence: true 
 
   #before_create = before saved in db
-  before_create :update_correctness 
+  before_save :update_correctness 
   after_save  :update_level_score
 
   def update_correctness 
+    puts "#{self.id} #{answer.correctness == true} "
     if answer.correctness == true
       self.score = 1 
     else 
@@ -21,10 +22,8 @@ class QuestionPlay < ActiveRecord::Base
   end
 
   def update_level_score
-    if complete?
       self.level_play.score = number_of_correct_answers
       self.level_play.save
-    end 
   end
 
   def number_of_correct_answers
