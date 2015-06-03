@@ -12,6 +12,10 @@ class QuestionPlay < ActiveRecord::Base
   before_save :update_correctness 
   after_save  :update_level_score
 
+  # def level_question_ids
+  #   level_play.level.questions.map(&:id)
+  # end
+
   def update_correctness 
     puts "#{self.id} #{answer.correctness == true} "
     if answer.correctness == true
@@ -22,8 +26,8 @@ class QuestionPlay < ActiveRecord::Base
   end
 
   def update_level_score
-      self.level_play.score = number_of_correct_answers
-      self.level_play.save
+    self.level_play.score = number_of_correct_answers
+    self.level_play.save
   end
 
   def number_of_correct_answers

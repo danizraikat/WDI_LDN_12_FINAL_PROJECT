@@ -11,4 +11,11 @@ class LevelPlay < ActiveRecord::Base
   def questions
     level.questions
   end
+
+  private
+    def test
+      level.test
+    end
+
+    
 end

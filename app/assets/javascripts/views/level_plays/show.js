@@ -65,14 +65,9 @@ define([
     },
 
     createQuestionPlay: function(ev){
-
       ev.preventDefault();
-
-
-
       var currentQuestionId = $(ev.currentTarget).data("question-id");
       var selected = $("input[data-question-id="+currentQuestionId+"][type=radio]:checked")
-      
       $.ajax({
         type: "POST",
         url: "/question_plays",
@@ -82,7 +77,8 @@ define([
           level_play_id: $(selected).data("level_play")
         }}
       }).done(function(data){
-        console.log(data);
+        // console.log(data);
+        $('.score-value').text(data.level_play.score)
         $(ev.currentTarget).attr("disabled", "disabled")
       })
     }

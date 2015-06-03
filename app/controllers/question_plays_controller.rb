@@ -26,18 +26,10 @@
   def create
     @question_play = current_user.question_plays.new(question_play_params)
     if @question_play.save
-      render json: {}   
+      render json: @question_play, root: false   
+    else
+      render json: @question_play.errors, status: :unprocessable_entity
     end 
-
-    # respond_to do |format|
-    #   if @question_play.save
-    #     format.html { redirect_to @question_play, notice: 'Question play was successfully created.' }
-    #     format.json { render :show, status: :created, location: @question_play }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @question_play.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   # PATCH/PUT /question_plays/1
