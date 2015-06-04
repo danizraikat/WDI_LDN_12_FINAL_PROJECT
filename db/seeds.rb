@@ -29,6 +29,18 @@ questionR3 = levelR1.questions.create!(test_id: 1, title: "Question 3", content:
   answerR8 = questionR3.answers.create!(title: "2", content: "#", correctness: true)
   answerR9 = questionR3.answers.create!(title: "3", content: "--", correctness: false)
 
+#Ruby LEVEL 2 qustions:
+questionR4 = levelR2.questions.create!(test_id: 1, title: "Question 1", content: "What is ruby?")
+
+  answerR10 = questionR4.answers.create!(title: "1", content: "Programming language", correctness: false)
+  answerR11 = questionR4.answers.create!(title: "2", content: "Name of a computer program", correctness: true)
+  answerR12 = questionR4.answers.create!(title: "3", content: "Diamond toy", correctness: false)
+
+questionR4 = levelR2.questions.create!(test_id: 1, title: "Question 1", content: "What is ruby?")
+
+  answerR10 = questionR4.answers.create!(title: "1", content: "Programming language", correctness: false)
+  answerR11 = questionR4.answers.create!(title: "2", content: "Name of a computer program", correctness: true)
+  answerR12 = questionR4.answers.create!(title: "3", content: "Diamond toy", correctness: false)
 
 user1 = User.create!(email: "gerry@gerry.com", password: "password", name: "Gerry Mathe", brief: "Happy to be the seocnd user of this website", role: "User")
 
