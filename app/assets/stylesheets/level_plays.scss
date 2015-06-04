@@ -16,8 +16,8 @@ h1.h1-lp-show, h2.h2-lp-show, h3.h3-lp-show-qtitle, h3.h3-lp-show-qcontent, form
   font-family: Courier;
 }
 
-.heading-lp-show{
-  padding-left: 5%;
+.heading-lp-show, .heading2-lp-show {
+  padding-left: 11%;
 }
 
 .h2-lp-show {
@@ -35,14 +35,22 @@ div.div-lp-show-question {
   width: 800px;
 } 
 
+div.div-lp-show-question:hover {
+  background-color: #B8B8B8; 
+}
+
 .submit-button {
-  background-color: #E6E6E6;
+  background-color: white;
   border-color: black;
   border-width: 2.5px;
 }
 
+.h5-submit-button {
+  font-family: Courier;
+}
+
 .submit-button:hover {
-  background-color: white; 
+  background-color: yellow; 
 }
 
 

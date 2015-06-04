@@ -42,11 +42,11 @@ questionR5 = levelR2.questions.create!(test_id: 1, title: "Question 2", content:
   answerR14 = questionR5.answers.create!(title: "2", content: "Float", correctness: false)
   answerR15 = questionR5.answers.create!(title: "3", content: "Complex", correctness: false)
 
-questionR6 = levelR2.questions.create!(test_id: 1, title: "Question 2", content: "Which of the following is not a direct sublclass of a Numeric Ruby class?")
+questionR6 = levelR2.questions.create!(test_id: 1, title: "Question 2", content: "Do you have any questions?")
 
-  answerR16 = questionR6.answers.create!(title: "1", content: "Fixnum", correctness: true)
-  answerR17 = questionR6.answers.create!(title: "2", content: "Float", correctness: false)
-  answerR18 = questionR6.answers.create!(title: "3", content: "Complex", correctness: false)
+  answerR16 = questionR6.answers.create!(title: "1", content: "Yes", correctness: true)
+  answerR17 = questionR6.answers.create!(title: "2", content: "No", correctness: false)
+  answerR18 = questionR6.answers.create!(title: "3", content: "May be", correctness: false)
 
 user1 = User.create!(email: "gerry@gerry.com", password: "password", name: "Gerry Mathe", brief: "Happy to be the seocnd user of this website", role: "User")
 

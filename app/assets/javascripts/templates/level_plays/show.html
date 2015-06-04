@@ -3,7 +3,6 @@
     
     <div class="heading-lp-show">
       <h1 class="h1-lp-show">Game ON !</h1>
-      <h2 class="h2-lp-show">Score: <span class="score-value"><%= level_play.get("score") %></span></h2>
     </div>
 
     <div class="main-lp-show">
@@ -20,13 +19,17 @@
               </form>                       
             </p>
             <button class="submit-button submit" data-question-id="<%= question.id %>">
-              <h5>SUBMIT</h5> 
+              <h5 class="h5-submit-button">SUBMIT</h5>  
             </button>
           </div>
         <% }); %>
       </ul>
     </div>
 
+    <div class="heading2-lp-show">
+      <h2 class="h2-lp-show">Score: <span class="score-value"><%= level_play.get("score") %></span></h2>
+    </div>
+    
     <!-- <button><a class="play" href="/#level_plays/:id"> Score</a></button> -->
 
   </div>
