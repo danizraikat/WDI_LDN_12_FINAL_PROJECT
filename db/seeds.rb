@@ -36,11 +36,17 @@ questionR4 = levelR2.questions.create!(test_id: 1, title: "Question 1", content:
   answerR11 = questionR4.answers.create!(title: "2", content: "Name of a computer program", correctness: true)
   answerR12 = questionR4.answers.create!(title: "3", content: "Diamond toy", correctness: false)
 
-questionR4 = levelR2.questions.create!(test_id: 1, title: "Question 1", content: "What is ruby?")
+questionR5 = levelR2.questions.create!(test_id: 1, title: "Question 2", content: "Which of the following is not a direct sublclass of a Numeric Ruby class?")
 
-  answerR10 = questionR4.answers.create!(title: "1", content: "Programming language", correctness: false)
-  answerR11 = questionR4.answers.create!(title: "2", content: "Name of a computer program", correctness: true)
-  answerR12 = questionR4.answers.create!(title: "3", content: "Diamond toy", correctness: false)
+  answerR13 = questionR5.answers.create!(title: "1", content: "Fixnum", correctness: true)
+  answerR14 = questionR5.answers.create!(title: "2", content: "Float", correctness: false)
+  answerR15 = questionR5.answers.create!(title: "3", content: "Complex", correctness: false)
+
+questionR6 = levelR2.questions.create!(test_id: 1, title: "Question 2", content: "Which of the following is not a direct sublclass of a Numeric Ruby class?")
+
+  answerR16 = questionR6.answers.create!(title: "1", content: "Fixnum", correctness: true)
+  answerR17 = questionR6.answers.create!(title: "2", content: "Float", correctness: false)
+  answerR18 = questionR6.answers.create!(title: "3", content: "Complex", correctness: false)
 
 user1 = User.create!(email: "gerry@gerry.com", password: "password", name: "Gerry Mathe", brief: "Happy to be the seocnd user of this website", role: "User")
 
