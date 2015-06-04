@@ -18,7 +18,7 @@ class LevelsController < ApplicationController
       else
         format.json { render json: @level.errors, root: false, status: :unprocessable_entity }
       end
-    en
+    end
   end
 
   def update
