@@ -24,10 +24,14 @@
   font-family: Courier;
 }
 
-
-.logo-main {
-  color: white;
+.image-main {
+  position: absolute;
 }
+
+.h1-logo-main {
+  color: red;
+  position: relative;
+} 
 
 
 
