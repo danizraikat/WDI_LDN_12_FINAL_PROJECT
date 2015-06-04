@@ -5,7 +5,7 @@ class CreateQuestionPlays < ActiveRecord::Migration
       t.integer :question_id
       t.integer :answer_id
       t.integer :level_play_id
-      t.string :score
+      t.integer :score
 
       t.timestamps null: false
     end
